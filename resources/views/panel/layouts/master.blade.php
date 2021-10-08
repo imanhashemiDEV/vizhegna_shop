@@ -23,6 +23,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{{url('panel/dist/css/custom-style.css')}}">
 
     <link rel="stylesheet" href="{{url('panel/plugins/select2/select2.min.css')}}">
+
+    <link rel="stylesheet" href="{{url('panel/plugins/sweet_alert/sweetalert2.min.css')}}">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -43,12 +45,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{url('panel/dist/js/adminlte.min.js')}}"></script>
 
 <script src="{{url('panel/plugins/select2/select2.full.min.js')}}"></script>
+
+<script src="{{url('panel/plugins/sweet_alert/sweetalert2.all.min.js')}}"></script>
+
 <script>
     $(function () {
         //Initialize Select2 Elements
         $('.select2').select2()
     })
 </script>
+
+@yield('scripts')
+
 </body>
 
 </html>

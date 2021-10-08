@@ -43,7 +43,7 @@
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">ارسال</button>
+                                <button type="submit" class="btn btn-primary">ثبت</button>
                             </div>
                         </form>
                     </div>

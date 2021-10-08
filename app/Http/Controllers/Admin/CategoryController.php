@@ -7,6 +7,7 @@ use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CategoryController extends Controller
 {
@@ -68,7 +69,9 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::query()->find($id);
+        $categories=Category::query()->pluck('title','id');
+        return view('panel.category.update_category',compact('category','categories'));
     }
 
     /**
@@ -80,7 +83,14 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       $category = Category::query()->find($id)->update([
+           'title'=>$request->input('title'),
+           'slug'=>make_slug($request->input('title')),
+           'parent_id'=>$request->input('parent_id')
+       ]);
+
+        return redirect()->back()->with('message','دسته بندی با موفقیت ویرایش شد');
+
     }
 
     /**
@@ -91,7 +101,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+       //
     }
 
 }
