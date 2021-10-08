@@ -6,6 +6,16 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 offset-3">
+
+                    @if(Session::has('message'))
+                        <div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                           {{session('message')}}
+                        </div>
+                    @endif
+
+                    @include('panel.partials.errors')
+
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
@@ -24,7 +34,9 @@
                                     <label>دسته پدر</label>
                                     <select class="form-select select2 p-4 select2-hidden-accessible" name="parent_id" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                         <option selected="selected" value="0">دسته اصلی</option>
-                                        <option value="1">شیراز</option>
+                                        @foreach($categories as $key=>$value)
+                                           <option value="{{$key}}">{{$value}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

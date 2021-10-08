@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -16,7 +17,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::query()->get();
+        return  view('panel.category.categories',compact('categories'));
     }
 
     /**
@@ -26,7 +28,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('panel.category.create_category');
+        $categories=Category::query()->pluck('title','id');
+        return view('panel.category.create_category',compact('categories'));
     }
 
     /**
@@ -35,7 +38,7 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoryRequest $request)
     {
         $category = Category::query()->create([
             'title'=>$request->input('title'),
@@ -43,7 +46,7 @@ class CategoryController extends Controller
             'parent_id'=>$request->input('parent_id')
         ]);
 
-        return redirect()->back();
+        return redirect()->back()->with('message','دسته بندی با موفقیت اضافه شد');
     }
 
     /**
