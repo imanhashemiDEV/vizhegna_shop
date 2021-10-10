@@ -9,6 +9,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>فروشگاه ویژگان</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{url('panel/plugins/font-awesome/css/font-awesome.min.css')}}">
@@ -54,9 +55,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         $('.select2').select2()
     })
 </script>
-
 @yield('scripts')
-
 </body>
 
 </html>

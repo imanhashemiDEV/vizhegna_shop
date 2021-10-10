@@ -65,10 +65,9 @@
     </div>
 
 @endsection
-
 @section('scripts')
     <script>
-        function deleteItem($id) {
+        function deleteItem(id) {
 
             Swal.fire({
                 title: 'حذف دسته بندی',
@@ -80,17 +79,38 @@
                 confirmButtonText: 'بله',
                 cancelButtonText: 'خیر',
             }).then((result) => {
-
-
                 if (result.isConfirmed) {
-                    Swal.fire(
-                        'دسته حذف شد',
-                        'دسته مورد نظر با موفقیت حذف شد',
-                        'باشه'
-                    )
+
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    });
+
+                    $.ajax(
+                        {
+                            url: "http://127.0.0.1:8000/admin/categories/"+id,
+                            type: 'delete',
+                            dataType: "JSON",
+                            data: {
+                                "id": id
+                            },
+                            success: function (response)
+                            {
+                                Swal.fire(
+                                    'دسته حذف شد',
+                                    'دسته مورد نظر با موفقیت حذف شد',
+                                    'باشه'
+                                )
+
+                               // location.reload();
+                            },
+                            error: function(xhr) {
+                                console.log(xhr.responseText);
+                            }
+                        });
                 }
             });
         }
     </script>
 @endsection
-
