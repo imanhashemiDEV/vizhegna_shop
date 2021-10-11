@@ -13,22 +13,6 @@
                         <input type="text" placeholder="نام محصول یا برند را جستجو کنید...">
                         <i class="far fa-search"></i>
                     </form>
-                    <div class="search-result">
-                        <ul class="search-result-list">
-                            <li><a href="#">موبایل</a></li>
-                            <li><a href="#">سامسونگ</a></li>
-                            <li><a href="#">مودم</a></li>
-                            <li><a href="#">اپل</a></li>
-                            <li><a href="#">تلویزیون</a></li>
-                        </ul>
-                        <ul class="search-result-most-view">
-                            <li><a href="#">موبایل</a></li>
-                            <li><a href="#">سامسونگ</a></li>
-                            <li><a href="#">مودم</a></li>
-                            <li><a href="#">اپل</a></li>
-                            <li><a href="#">تلویزیون</a></li>
-                        </ul>
-                    </div>
                 </div>
             </div>
             <div class="user-items">
@@ -187,6 +171,11 @@
         </div>
         <nav class="nav-wrapper">
             <ul>
+                @foreach($categories as $category)
+                    <li>
+                        <a href="#"><i></i>{{$category->title}}</a>
+                    </li>
+                @endforeach
                 <li class="mega-menu mega-menu-3-columns">
                     <a href="#"><i class="fal fa-badge-percent text-danger"></i>تخفیف ها و پیشنهادها</a>
                     <ul class="row">
@@ -210,9 +199,7 @@
                 <li>
                     <a href="#"><i class="fal fa-coin text-secondary"></i>همتا کلاب</a>
                 </li>
-                <li>
-                    <a href="#"><i></i>سوال دارید؟</a>
-                </li>
+
             </ul>
         </nav>
     </div>

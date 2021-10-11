@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('fornt.index');
+        $categories = Category::query()->where('parent_id',0)->get();
+        return view('fornt.index',compact('categories'));
     }
 }

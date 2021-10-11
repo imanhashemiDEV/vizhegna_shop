@@ -2,7 +2,7 @@
 @extends('fornt.layouts.master')
 @section('content')
 <div class="page-wrapper">
-    @include('fornt.partials.header')
+    @include('fornt.partials.header',[$categories=$categories])
     <!-- Page Content -->
     <main class="page-content">
         <div class="container">

@@ -18,7 +18,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::query()->get();
+        $categories = Category::query()->paginate(2);
         return  view('panel.category.categories',compact('categories'));
     }
 
@@ -102,7 +102,6 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         Category::destroy($id);
-        return true;
     }
 
 }
