@@ -49,6 +49,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{url('panel/plugins/select2/select2.full.min.js')}}"></script>
 
 <script src="{{url('panel/plugins/sweet_alert/sweetalert2.all.min.js')}}"></script>
+<script src="{{url('js/custom.js')}}"></script>
 
 <script>
     $(function () {

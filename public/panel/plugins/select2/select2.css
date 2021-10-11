@@ -71,7 +71,7 @@
     cursor: pointer; }
 
 .select2-container--open .select2-dropdown {
-  right: 0; }
+  left: 0; }
 
 .select2-container--open .select2-dropdown--above {
   border-bottom: none;
