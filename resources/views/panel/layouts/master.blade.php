@@ -26,6 +26,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{{url('panel/plugins/select2/select2.min.css')}}">
 
     <link rel="stylesheet" href="{{url('panel/plugins/sweet_alert/sweetalert2.min.css')}}">
+    <link rel="stylesheet" href="{{url('css/custom.css')}}">
 </head>
 
 <body class="hold-transition sidebar-mini">
