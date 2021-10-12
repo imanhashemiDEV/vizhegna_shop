@@ -9,6 +9,6 @@ class PanelController extends Controller
 {
     public function index()
     {
-        return view('panel.index');
+        return view('admin.index');
     }
 }
