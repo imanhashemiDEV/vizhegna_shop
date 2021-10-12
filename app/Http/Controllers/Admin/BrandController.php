@@ -3,13 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CategoryRequest;
-use App\Models\Category;
+use App\Models\Brand;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
-use RealRashid\SweetAlert\Facades\Alert;
 
-class CategoryController extends Controller
+class BrandController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::query()->paginate(10);
-        return  view('admin.category.categories',compact('categories'));
+        $brands = Brand::query()->paginate(10);
+        return view('admin.brand.brands',compact('brands'));
     }
 
     /**
@@ -29,8 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        $categories=Category::query()->pluck('title','id');
-        return view('admin.category.create_category',compact('categories'));
+        return view('admin.brand.create_brand');
     }
 
     /**
@@ -39,15 +35,17 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CategoryRequest $request)
+    public function store(Request $request)
     {
-        $category = Category::query()->create([
-            'title'=>$request->input('title'),
-            'slug'=>make_slug($request->input('title')),
-            'parent_id'=>$request->input('parent_id')
-        ]);
+        $title = $request->input('title');
+        if($request->hasFile('image')){
 
-        return redirect()->back()->with('message','دسته بندی با موفقیت اضافه شد');
+            $image = $request->input('image');
+            $fileName = time().'.'.$image->extension();
+            $image->move(public_path('brands'), $fileName);
+        }
+
+
     }
 
     /**
@@ -69,9 +67,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::query()->find($id);
-        $categories=Category::query()->pluck('title','id');
-        return view('admin.category.update_category',compact('category','categories'));
+        //
     }
 
     /**
@@ -83,14 +79,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-       $category = Category::query()->find($id)->update([
-           'title'=>$request->input('title'),
-           'slug'=>make_slug($request->input('title')),
-           'parent_id'=>$request->input('parent_id')
-       ]);
-
-        return redirect()->back()->with('message','دسته بندی با موفقیت ویرایش شد');
-
+        //
     }
 
     /**
@@ -101,7 +90,6 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        Category::destroy($id);
+        //
     }
-
 }

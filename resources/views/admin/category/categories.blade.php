@@ -1,6 +1,6 @@
-@extends('panel.layouts.master')
+@extends('admin.layouts.master')
 @section('content')
-    @include('panel.partials.breadcrump',[$title="لیست دسته بندی"])
+    @include('admin.partials.breadcrump',[$title="لیست دسته بندی"])
 
     <div class="content">
         <div class="container-fluid">
@@ -25,27 +25,27 @@
                             <table class="table table-hover">
                                 <tbody>
                                 <tr>
-                                    <th class="text-primary text-center">ردیف</th>
-                                    <th class="text-primary text-center">عنوان دسته بندی</th>
-                                    <th class="text-primary text-center">عنوان اسلاگ</th>
-                                    <th class="text-primary text-center">دسته پدر</th>
-                                    <th class="text-primary text-center">تاریخ ایجاد</th>
-                                    <th class="text-primary text-center">ویرایش</th>
-                                    <th class="text-primary text-center">حذف</th>
+                                    <th class="text-primary text-center align-middle">ردیف</th>
+                                    <th class="text-primary text-center align-middle">عنوان دسته بندی</th>
+                                    <th class="text-primary text-center align-middle">عنوان اسلاگ</th>
+                                    <th class="text-primary text-center align-middle">دسته پدر</th>
+                                    <th class="text-primary text-center align-middle">تاریخ ایجاد</th>
+                                    <th class="text-primary text-center align-middle">ویرایش</th>
+                                    <th class="text-primary text-center align-middle">حذف</th>
                                 </tr>
                                 @foreach($categories as $category)
                                     <tr>
-                                        <td class="text-center">{{$i++}}</td>
-                                        <td class="text-center">{{$category->title}}</td>
-                                        <td class="text-center">{{$category->slug}}</td>
-                                        <td class="text-center">{{$category->parent->title}}</td>
-                                        <td class="text-center">{{\Hekmatinasser\Verta\Verta::instance($category->created_at)->format('%B %d، %Y')}}</td>
-                                        <td class="text-center">
+                                        <td class="text-center align-middle">{{$i++}}</td>
+                                        <td class="text-center align-middle">{{$category->title}}</td>
+                                        <td class="text-center align-middle">{{$category->slug}}</td>
+                                        <td class="text-center align-middle">{{$category->parent->title}}</td>
+                                        <td class="text-center align-middle">{{\Hekmatinasser\Verta\Verta::instance($category->created_at)->format('%B %d، %Y')}}</td>
+                                        <td class="text-center align-middle">
                                             <a class="btn btn-app" href="{{route('categories.edit',$category->id)}}">
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>
                                         </td>
-                                        <td class="text-center">
+                                        <td class="text-center align-middle">
                                             <a class="btn btn-app" onclick="deleteItem({{$category->id}})">
                                                 <i class="fa fa-trash"></i> حذف
                                             </a>

@@ -12449,7 +12449,7 @@ label:not(.form-check-label):not(.custom-file-label) {
   padding-left: 0;
   padding-right: 0;
   height: auto;
-  margin-top: -4px;
+  margin-top: -13px;
 }
 
 .select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {

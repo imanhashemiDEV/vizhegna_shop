@@ -1,6 +1,6 @@
-@extends('panel.layouts.master')
+@extends('admin.layouts.master')
 @section('content')
-    @include('panel.partials.breadcrump',[$title="ویرایش دسته بندی"])
+    @include('admin.partials.breadcrump',[$title="ویرایش دسته بندی"])
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
@@ -14,7 +14,7 @@
                         </div>
                 @endif
 
-                @include('panel.partials.errors')
+                @include('admin.partials.errors')
 
                 <!-- general form elements -->
                     <div class="card card-primary">

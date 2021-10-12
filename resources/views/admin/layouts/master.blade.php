@@ -21,17 +21,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- bootstrap rtl -->
     <link rel="stylesheet" href="{{url('panel/dist/css/bootstrap-rtl.min.css')}}">
     <!-- template rtl version -->
-    <link rel="stylesheet" href="{{url('panel/dist/css/custom-style.css')}}">
-
     <link rel="stylesheet" href="{{url('panel/plugins/select2/select2.min.css')}}">
-
     <link rel="stylesheet" href="{{url('panel/plugins/sweet_alert/sweetalert2.min.css')}}">
+    <link rel="stylesheet" href="{{url('panel/dist/css/custom-style.css')}}">
 </head>
 
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-@include('panel.partials.header')
-@include('panel.partials.sidebar')
+@include('admin.partials.header')
+@include('admin.partials.sidebar')
 <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         @yield('content')

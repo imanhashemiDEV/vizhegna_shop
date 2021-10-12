@@ -172,23 +172,24 @@
         <nav class="nav-wrapper">
             <ul>
                 @foreach($categories as $category)
-                    <li>
-                        <a href="#"><i></i>{{$category->title}}</a>
+                    <li class="mega-menu mega-menu-3-columns">
+                        <a href="#">{{$category->title}}</a>
+                        @if(count($category->child) > 0)
+                            <ul class="row">
+                                <li>
+                                    <ul>
+                                        @foreach($category->child as $child)
+                                            <li><a href="#">{{$child->title}}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                            </ul>
+                        @endif
                     </li>
                 @endforeach
-                <li class="mega-menu mega-menu-3-columns">
+                <li >
                     <a href="#"><i class="fal fa-badge-percent text-danger"></i>تخفیف ها و پیشنهادها</a>
-                    <ul class="row">
-                        <li class="col-6">
-                            <ul>
-                                <li><a href="#">کالاهای شگفت انگیز</a></li>
-                                <li><a href="#">شگفت انگیز سوپرمارکتی </a></li>
-                                <li><a href="#">فروش ویژه</a></li>
-                                <li><a href="#">کالای دیجیتال</a></li>
-                                <li><a href="#">مد و پوشاک</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+
                 </li>
                 <li>
                     <a href="#"><i class="fal fa-shield-check text-success"></i>همتای من</a>

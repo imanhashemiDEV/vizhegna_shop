@@ -11,6 +11,6 @@ class HomeController extends Controller
     public function index()
     {
         $categories = Category::query()->where('parent_id',0)->get();
-        return view('fornt.index',compact('categories'));
+        return view('front.index',compact('categories'));
     }
 }

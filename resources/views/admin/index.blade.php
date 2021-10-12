@@ -1,7 +1,7 @@
-@extends('panel.layouts.master')
+@extends('admin.layouts.master')
 
 @section('content')
-    @include('panel.partials.breadcrump',[$title=""])
+    @include('admin.partials.breadcrump',[$title=""])
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">

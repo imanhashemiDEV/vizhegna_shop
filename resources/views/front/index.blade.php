@@ -1,8 +1,8 @@
 
-@extends('fornt.layouts.master')
+@extends('front.layouts.master')
 @section('content')
 <div class="page-wrapper">
-    @include('fornt.partials.header',[$categories=$categories])
+    @include('front.partials.header',[$categories=$categories])
     <!-- Page Content -->
     <main class="page-content">
         <div class="container">
@@ -723,6 +723,6 @@
         </div>
     </main>
     <!-- end Page Content -->
-    @include('fornt.partials.footer')
+    @include('front.partials.footer')
 </div>
 @endsection
