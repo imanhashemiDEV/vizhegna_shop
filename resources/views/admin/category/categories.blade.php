@@ -71,50 +71,49 @@
 @endsection
 @section('scripts')
     <script>
-        function deleteItem(id) {
+            function deleteItem(id) {
+                Swal.fire({
+                    title: 'حذف دسته بندی',
+                    text: "آیا از حذف مطمئن هستید؟",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'بله',
+                    cancelButtonText: 'خیر',
+                }).then((result) => {
+                    if (result.isConfirmed) {
 
-            Swal.fire({
-                title: 'حذف دسته بندی',
-                text: "آیا از حذف مطمئن هستید؟",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'بله',
-                cancelButtonText: 'خیر',
-            }).then((result) => {
-                if (result.isConfirmed) {
-
-                    $.ajaxSetup({
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        }
-                    });
-
-                    $.ajax(
-                        {
-                            url: "http://127.0.0.1:8000/admin/categories/"+id,
-                            type: 'delete',
-                            dataType: "JSON",
-                            data: {
-                                "id": id
-                            },
-                            success: function (response)
-                            {
-                                Swal.fire(
-                                    'دسته حذف شد',
-                                    'دسته مورد نظر با موفقیت حذف شد',
-                                    'باشه'
-                                );
-                            },
-                            error: function(xhr) {
-                                console.log(xhr.responseText);
+                        $.ajaxSetup({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                             }
                         });
 
-                    location.reload();
-                }
-            });
-        }
+                        $.ajax(
+                            {
+                                url: url + "/admin/categories/"+id,
+                                type: 'delete',
+                                dataType: "JSON",
+                                data: {
+                                    "id": id
+                                },
+                                success: function (response)
+                                {
+                                    Swal.fire(
+                                        'دسته حذف شد',
+                                        'دسته مورد نظر با موفقیت حذف شد',
+                                        'باشه'
+                                    );
+                                },
+                                error: function(xhr) {
+                                    console.log(xhr.responseText);
+                                }
+                            });
+
+                        location.reload();
+                    }
+                });
+            }
     </script>
 @endsection

@@ -55,3 +55,12 @@
     </div>
     <!-- /.content -->
 @endsection
+@section('scripts')
+    <script>
+        $('select').select2({
+            dir: "rtl",
+            dropdownAutoWidth: true,
+            dropdownParent: $('#parent')
+        });
+    </script>
+@endsection

@@ -23,7 +23,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- template rtl version -->
     <link rel="stylesheet" href="{{url('panel/plugins/select2/select2.min.css')}}">
     <link rel="stylesheet" href="{{url('panel/plugins/sweet_alert/sweetalert2.min.css')}}">
+<<<<<<< HEAD:resources/views/admin/layouts/master.blade.php
     <link rel="stylesheet" href="{{url('panel/dist/css/custom-style.css')}}">
+=======
+    <link rel="stylesheet" href="{{url('css/custom.css')}}">
+>>>>>>> 9dd699033da4eee92c94782b3ea1f0749979cb47:resources/views/panel/layouts/master.blade.php
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -46,6 +50,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{url('panel/plugins/select2/select2.full.min.js')}}"></script>
 
 <script src="{{url('panel/plugins/sweet_alert/sweetalert2.all.min.js')}}"></script>
+<script src="{{url('js/custom.js')}}"></script>
 
 <script>
     $(function () {
