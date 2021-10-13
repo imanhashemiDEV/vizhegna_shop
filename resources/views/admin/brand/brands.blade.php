@@ -35,8 +35,10 @@
                                 @foreach($brands as $brand)
                                     <tr>
                                         <td class="text-center align-middle">{{$i++}}</td>
+                                        <td class="text-center align-middle" >
+                                            <img  style="width: 100px" src="{{url('brands/'.$brand->image)}}" alt="">
+                                        </td>
                                         <td class="text-center align-middle">{{$brand->title}}</td>
-                                        <td class="text-center align-middle">{{$brand->image}}</td>
                                         <td class="text-center align-middle">{{\Hekmatinasser\Verta\Verta::instance($brand->created_at)->format('%B %d، %Y')}}</td>
                                         <td class="text-center align-middle">
                                             <a class="btn btn-app" href="{{route('brands.edit',$brand->id)}}">
@@ -91,7 +93,7 @@
 
                     $.ajax(
                         {
-                            url: "http://127.0.0.1:8000/admin/brands/"+id,
+                            url: url + "/admin/brands/"+id,
                             type: 'delete',
                             dataType: "JSON",
                             data: {
