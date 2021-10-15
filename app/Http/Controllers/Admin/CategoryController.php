@@ -81,7 +81,7 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CategoryRequest $request, $id)
     {
        $category = Category::query()->find($id)->update([
            'title'=>$request->input('title'),
