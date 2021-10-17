@@ -19,7 +19,7 @@
                        with font-awesome or any other icon font library -->
                     <li class="nav-item has-treeview menu-open">
                         <a href="#" class="nav-link active">
-                            <i class="nav-icon fa fa-dashboard"></i>
+                            <i class="nav-icon fa fa-folder"></i>
                             <p>
                                 دسته بندی ها
                                 <i class="right fa fa-angle-left"></i>
@@ -43,7 +43,7 @@
 
                     <li class="nav-item has-treeview menu-open">
                         <a href="#" class="nav-link active">
-                            <i class="nav-icon fa fa-dashboard"></i>
+                            <i class="nav-icon fa fa-folder"></i>
                             <p>
                                 برند ها
                                 <i class="right fa fa-angle-left"></i>
@@ -67,7 +67,7 @@
 
                     <li class="nav-item has-treeview menu-open">
                         <a href="#" class="nav-link active">
-                            <i class="nav-icon fa fa-dashboard"></i>
+                            <i class="nav-icon fa fa-folder"></i>
                             <p>
                                 محصول ها
                                 <i class="right fa fa-angle-left"></i>

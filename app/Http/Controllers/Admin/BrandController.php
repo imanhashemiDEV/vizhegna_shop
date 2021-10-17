@@ -29,7 +29,7 @@ class BrandController extends Controller
 
             $image = $request->file('image');
             $fileName = time().'.'.$image->extension();
-            $image->move(public_path('brands'), $fileName);
+            $image->move(public_path('images/brands'), $fileName);
         }
 
         Brand::query()->create([
@@ -60,7 +60,7 @@ class BrandController extends Controller
         if($request->hasFile('image')){
             $image = $request->file('image');
             $fileName = time().'.'.$image->extension();
-            $image->move(public_path('brands'), $fileName);
+            $image->move(public_path('images/brands'), $fileName);
         }
 
         Brand::query()->find($id)->update([
@@ -75,7 +75,7 @@ class BrandController extends Controller
     public function destroy($id)
     {
         $brand = Brand::query()->find($id);
-        $path = public_path()."/brands/".$brand->image;
+        $path = public_path()."images/brands/".$brand->image;
         unlink($path);
         $brand->delete();
     }

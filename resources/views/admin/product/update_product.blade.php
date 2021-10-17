@@ -29,11 +29,11 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>عنوان محصول</label>
-                                    <input type="text" class="form-control" name="title"  placeholder="عنوان محصول را وارد کنید">
+                                    <input type="text" class="form-control" name="title"  placeholder="عنوان محصول را وارد کنید" value="{{$product->title}}">
                                 </div>
                                 <div class="form-group">
                                     <label>قیمت محصول</label>
-                                    <input type="text" class="form-control" name="price"  placeholder="قیمت محصول را وارد کنید">
+                                    <input type="text" class="form-control" name="price"  placeholder="قیمت محصول را وارد کنید" value="{{$product->price}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputFile">انتخاب عکس</label>
@@ -46,21 +46,31 @@
                                 </div>
                                 <div class="form-group">
                                     <label>توضیحات محصول</label>
-                                    <textarea class="form-control" name="description"  cols="30" rows="10"></textarea>
+                                    <textarea class="form-control" name="description"  cols="30" rows="10"> {{$product->description}} </textarea>
                                 </div>
                                 <div class="form-group">
                                     <label>دسته بندی</label>
                                     <select class="form-select select2 p-4 select2-hidden-accessible" name="category_id" style="width: 100%;" tabindex="-1" aria-hidden="true">
+
                                         @foreach($categories as $key=>$value)
-                                            <option value="{{$key}}">{{$value}}</option>
+                                            @if($product->category_id == $key)
+                                            <option selected value="{{$key}}">{{$value}}</option>
+                                            @else
+                                             <option value="{{$key}}">{{$value}}</option>
+                                            @endif
                                         @endforeach
+
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>برند</label>
                                     <select class="form-select select2 p-4 select2-hidden-accessible" name="brand_id" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                         @foreach($brands as $key=>$value)
-                                            <option value="{{$key}}">{{$value}}</option>
+                                            @if($product->brand_id == $key)
+                                                <option selected value="{{$key}}">{{$value}}</option>
+                                            @else
+                                                <option value="{{$key}}">{{$value}}</option>
+                                            @endif
                                         @endforeach
                                     </select>
                                 </div>

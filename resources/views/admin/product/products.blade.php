@@ -40,7 +40,7 @@
                                     <tr>
                                         <td class="text-center align-middle">{{$i++}}</td>
                                         <td class="text-center align-middle" >
-                                            <img  style="width: 100px" src="{{url('products/'.$product->image)}}" alt="">
+                                            <img  style="width: 100px" src="{{url('images/products/'.$product->image)}}" alt="">
                                         </td>
                                         <td class="text-center align-middle">{{$product->title}}</td>
                                         <td class="text-center align-middle">{{$product->slug}}</td>

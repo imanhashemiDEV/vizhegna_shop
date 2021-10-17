@@ -36,7 +36,7 @@
                                     <tr>
                                         <td class="text-center align-middle">{{$i++}}</td>
                                         <td class="text-center align-middle" >
-                                            <img  style="width: 100px" src="{{url('brands/'.$brand->image)}}" alt="">
+                                            <img  style="width: 100px" src="{{url('images/brands/'.$brand->image)}}" alt="">
                                         </td>
                                         <td class="text-center align-middle">{{$brand->title}}</td>
                                         <td class="text-center align-middle">{{\Hekmatinasser\Verta\Verta::instance($brand->created_at)->format('%B %d، %Y')}}</td>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProductRequest;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
@@ -25,13 +26,13 @@ class ProductController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
 
         if($request->hasFile('image')){
             $image = $request->file('image');
             $fileName = time().'.'.$image->extension();
-            $image->move(public_path('products'), $fileName);
+            $image->move(public_path('images/products'), $fileName);
         }
 
         Product::query()->create([
@@ -63,13 +64,32 @@ class ProductController extends Controller
     }
 
 
-    public function update(Request $request, $id)
+    public function update(ProductRequest $request, $id)
     {
-        //
+        if($request->hasFile('image')){
+            $image = $request->file('image');
+            $fileName = time().'.'.$image->extension();
+            $image->move(public_path('images/products'), $fileName);
+        }
+
+        Product::query()->find($id)->update([
+            'title'=>$request->input('title'),
+            'slug'=>make_slug($request->input('title')),
+            'price'=>$request->input('price'),
+            'description'=>$request->input('description'),
+            'image'=>$fileName,
+            'category_id'=>$request->input('category_id'),
+            'brand_id'=>$request->input('brand_id')
+        ]);
+
+        return redirect()->back()->with('message','محصول با موفقیت ویرایش شد');
     }
 
     public function destroy($id)
     {
-        //
+        $product = Product::query()->find($id);
+        $path = public_path()."images/products/".$product->image;
+        unlink($path);
+        $product->delete();
     }
 }
