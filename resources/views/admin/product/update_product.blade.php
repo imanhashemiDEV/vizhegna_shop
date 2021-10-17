@@ -5,7 +5,10 @@
     <div class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 offset-3">
+                <div class="col-md-3 text-center">
+                    <img style="width: 200px;" src="{{url('products/'.$product->image)}}" alt="">
+                </div>
+                <div class="col-md-6">
 
                     @if(Session::has('message'))
                         <div class="alert alert-success alert-dismissible">
