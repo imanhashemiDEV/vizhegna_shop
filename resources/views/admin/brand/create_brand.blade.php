@@ -34,15 +34,21 @@
                                     <label for="exampleInputFile">انتخاب عکس</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="exampleInputFile" name="image">
-                                            <label class="custom-file-label" for="exampleInputFile">انتخاب عکس</label>
+                                            <input type="file" class="custom-file-input" id="pic" onchange="loadFile(event)" name="image">
+                                            <label class="custom-file-label" for="pic">انتخاب عکس</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group my-3">
+                                        <div class="custom-file">
+                                        <img src="{{ url('panel/dist/img/pic_1.jpg') }}" id="output" width="150" onclick="select_file()">
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
                             <!-- /.card-body -->
-                            <div class="card-footer">
+                            <div class="card-footer mt-5">
                                 <button type="submit" class="btn btn-primary">ثبت</button>
                             </div>
                         </form>
@@ -54,4 +60,23 @@
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
+@endsection
+@section('scripts')
+    <script>
+        function select_file () {
+            document.getElementById('pic').click();
+        }
+
+        function loadFile (event)
+        {
+            let render=new FileReader;
+            render.onload=function ()
+            {
+                var output=document.getElementById('output');
+                output.src=render.result;
+            };
+            render.readAsDataURL(event.target.files[0]);
+        }
+
+    </script>
 @endsection
