@@ -75,7 +75,7 @@ class BrandController extends Controller
     public function destroy($id)
     {
         $brand = Brand::query()->find($id);
-        $path = public_path()."images/brands/".$brand->image;
+        $path = public_path()."/images/brands/".$brand->image;
         unlink($path);
         $brand->delete();
     }

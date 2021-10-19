@@ -30,4 +30,10 @@ class Category extends Model
     {
         return $this->hasMany(Product::class);
     }
+
+    public function children()
+    {
+        $children = $this->child()->pluck('id');
+        return Product::query()->whereIn('category_id',$children)->get();
+    }
 }

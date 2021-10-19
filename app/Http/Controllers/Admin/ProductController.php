@@ -20,7 +20,7 @@ class ProductController extends Controller
 
     public function create()
     {
-        $categories = Category::query()->pluck('title','id');;
+        $categories = Category::query()->where('parent_id','!=',0)->pluck('title','id');
         $brands = Brand::query()->pluck('title','id');;
         return view('admin.product.create_product',compact('categories','brands'));
     }
@@ -58,7 +58,7 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::query()->find($id);
-        $categories = Category::query()->pluck('title','id');;
+        $categories = Category::query()->where('parent_id','!=',0)->pluck('title','id');;
         $brands = Brand::query()->pluck('title','id');;
         return view('admin.product.update_product',compact('categories','brands','product'));
     }
@@ -88,7 +88,7 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::query()->find($id);
-        $path = public_path()."images/products/".$product->image;
+        $path = public_path()."/images/products/".$product->image;
         unlink($path);
         $product->delete();
     }
