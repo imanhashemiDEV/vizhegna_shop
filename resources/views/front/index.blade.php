@@ -97,7 +97,7 @@
                 </div>
 
                 @foreach($categories as $category)
-                    @if(count($category->children()) > 0)
+                    @if(count($category->subcategory()) > 0)
                         <section class="product-carousel in-box">
                             <div class="section-title">
                                 <i class="fad fa-pen-nib"></i>
@@ -105,11 +105,11 @@
                             </div>
                             <div class="swiper-container slider-lg">
                                 <div class="swiper-wrapper">
-                                    @foreach($category->children() as $product )
+                                    @foreach($category->subcategory() as $product )
                                         <div class="swiper-slide">
                                             <div class="product-card">
                                                 <div class="product-card-top">
-                                                    <a href="" class="product-image">
+                                                    <a href="{{route('product.detail')}}" class="product-image">
                                                         <img src="{{url('/images/products/'.$product->image)}}"
                                                              alt="product image">
                                                     </a>

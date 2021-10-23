@@ -31,7 +31,7 @@ class Category extends Model
         return $this->hasMany(Product::class);
     }
 
-    public function children()
+    public function subcategory()
     {
         $children = $this->child()->pluck('id');
         return Product::query()->whereIn('category_id',$children)->get();
