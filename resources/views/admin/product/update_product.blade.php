@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3 text-center">
-                    <img style="width: 200px;" src="{{url('products/'.$product->image)}}" alt="">
+                    <img style="width: 200px;" src="{{url('images/products/'.$product->image)}}" alt="">
                 </div>
                 <div class="col-md-6">
 
@@ -35,8 +35,20 @@
                                     <input type="text" class="form-control" name="title"  placeholder="عنوان محصول را وارد کنید" value="{{$product->title}}">
                                 </div>
                                 <div class="form-group">
+                                    <label>عنوان انگلیسی</label>
+                                    <input type="text" class="form-control" name="title_en"  placeholder="عنوان انگلیسی محصول را وارد کنید" value="{{$product->title_en}}">
+                                </div>
+                                <div class="form-group">
                                     <label>قیمت محصول</label>
                                     <input type="text" class="form-control" name="price"  placeholder="قیمت محصول را وارد کنید" value="{{$product->price}}">
+                                </div>
+                                <div class="form-group">
+                                    <label>گارانتی محصول</label>
+                                    <input type="text" class="form-control" name="guaranty"  placeholder="گارانتی محصول را وارد کنید" value="{{$product->guaranty}}">
+                                </div>
+                                <div class="form-group">
+                                    <label>تعداد محصول</label>
+                                    <input type="text" class="form-control" name="product_count"  placeholder="تعداد محصول را وارد کنید" value="{{$product->product_count}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputFile">انتخاب عکس</label>

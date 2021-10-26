@@ -109,7 +109,7 @@
                                         <div class="swiper-slide">
                                             <div class="product-card">
                                                 <div class="product-card-top">
-                                                    <a href="{{route('product.detail')}}" class="product-image">
+                                                    <a href="{{route('product.detail',$product->id)}}" class="product-image">
                                                         <img src="{{url('/images/products/'.$product->image)}}"
                                                              alt="product image">
                                                     </a>

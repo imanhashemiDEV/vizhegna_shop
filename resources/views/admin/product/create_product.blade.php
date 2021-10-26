@@ -31,8 +31,20 @@
                                     <input type="text" class="form-control" name="title"  placeholder="عنوان محصول را وارد کنید">
                                 </div>
                                 <div class="form-group">
+                                    <label>عنوان انگلیسی</label>
+                                    <input type="text" class="form-control" name="title_en"  placeholder="عنوان انگلیسی محصول را وارد کنید">
+                                </div>
+                                <div class="form-group">
                                     <label>قیمت محصول</label>
                                     <input type="text" class="form-control" name="price"  placeholder="قیمت محصول را وارد کنید">
+                                </div>
+                                <div class="form-group">
+                                    <label>گارانتی محصول</label>
+                                    <input type="text" class="form-control" name="guaranty"  placeholder="گارانتی محصول را وارد کنید">
+                                </div>
+                                <div class="form-group">
+                                    <label>تعداد محصول</label>
+                                    <input type="text" class="form-control" name="product_count"  placeholder="تعداد محصول را وارد کنید">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputFile">انتخاب عکس</label>

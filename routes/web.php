@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 // Front Routes
 Route::get('/',[\App\Http\Controllers\Front\HomeController::class,'index']);
-Route::get('/product_detail',[\App\Http\Controllers\Front\FrontProductController::class,'productDetail'])->name('product.detail');
+Route::get('/product_detail/{id}',[\App\Http\Controllers\Front\FrontProductController::class,'productDetail'])->name('product.detail');
 
 
 

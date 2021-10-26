@@ -11,9 +11,9 @@
                         <div class="breadcrumb mb-1">
                             <nav>
                                 <a href="#">فروشگاه اینترنتی</a>
-                                <a href="#">کالای دیجیتال</a>
-                                <a href="#">گوشی موبایل</a>
-                                <a>گوشی موبایل سامسونگ مدل Galaxy A30s SM-A307FN/DS دو سیم کارت ظرفیت 32 گیگابایت</a>
+                                <a href="#">{{$product->category->parent->title}}</a>
+                                <a href="#">{{$product->category->title}}</a>
+                                <a>{{$product->title}}</a>
                             </nav>
                         </div>
                         <!-- end breadcrumb -->
@@ -129,19 +129,19 @@
                         <div class="col-xl-5 col-lg-4 col-md-6">
                             <div class="product-title mb-3">
                                 <h1>
-                                    گوشی موبایل سامسونگ مدل Galaxy A30s SM-A307FN/DS دو سیم کارت ظرفیت 32 گیگابایت
+                                    {{$product->title}}
                                 </h1>
                                 <h1 class="product-title-en">
-                                    Samsung Galaxy A30s SM-A307FN/DS Dual SIM 32GB Mobile Phone
+                                    {{$product->title_en}}
                                 </h1>
                             </div>
                             <div class="d-block mb-2">
                                 <span class="font-weight-bold">برند:</span>
-                                <a href="#" class="link--with-border-bottom">سامسونگ</a>
+                                <a href="#" class="link--with-border-bottom">{{$product->brand->title}}</a>
                             </div>
                             <div class="d-block mb-4">
                                 <span class="font-weight-bold">گارانتی:</span>
-                                <span>18 ماهه</span>
+                                <span>{{$product->guaranty}} ماهه</span>
                             </div>
                             <div class="product-params-special">
                                 <ul data-title="ویژگی‌های محصول">
@@ -277,96 +277,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- sellers -->
-                <div class="product-sellers shadow-around mb-5">
-                    <div class="product-seller">
-                        <div class="product-seller-col">
-                            <div class="product-seller-title">
-                                <div class="icon">
-                                    <i class="fas fa-store-alt"></i>
-                                </div>
-                                <div class="detail">
-                                    <div class="name">همتا <span class="badge badge-light rounded-pill">برگزیده</span>
-                                    </div>
-                                    <div class="rating">
-                                        <span class="value">۹۰.۲٪</span>
-                                        <span class="label">رضایت خریداران</span>
-                                        <span class="divider">|</span>
-                                        <span class="label">عملکرد</span>
-                                        <span class="value">عالی</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-seller-col">
-                            <div class="product-seller-conditions">
-                                <div class="product-seller-info">
-                                    <i class="fad fa-truck-container"></i>
-                                    <span>ارسال از همتا</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-seller-col">
-                            <div class="product-seller-guarantee">
-                                <div class="product-seller-info">
-                                    <i class="fad fa-shield-check"></i>
-                                    <span>گارانتی ۱۸ ماهه همتا</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-seller-col">
-                            <div class="product-seller-price-action">
-                                <div class="product-seller-price">۵,۵۵۰,۰۰۰<span class="currency">تومان</span></div>
-                                <div class="product-seller-action"><a href="#" class="btn btn-outline-danger">افزودن به
-                                        سبد</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-seller">
-                        <div class="product-seller-col">
-                            <div class="product-seller-title">
-                                <div class="icon">
-                                    <i class="fas fa-store-alt"></i>
-                                </div>
-                                <div class="detail">
-                                    <div class="name">همتا <span class="badge badge-light rounded-pill">برگزیده</span>
-                                    </div>
-                                    <div class="rating">
-                                        <span class="value">۹۰.۲٪</span>
-                                        <span class="label">رضایت خریداران</span>
-                                        <span class="divider">|</span>
-                                        <span class="label">عملکرد</span>
-                                        <span class="value">عالی</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-seller-col">
-                            <div class="product-seller-conditions">
-                                <div class="product-seller-info">
-                                    <i class="fad fa-truck-container"></i>
-                                    <span>ارسال از همتا</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-seller-col">
-                            <div class="product-seller-guarantee">
-                                <div class="product-seller-info">
-                                    <i class="fad fa-shield-check"></i>
-                                    <span>گارانتی ۱۸ ماهه همتا</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-seller-col">
-                            <div class="product-seller-price-action">
-                                <div class="product-seller-price">۵,۵۵۰,۰۰۰<span class="currency">تومان</span></div>
-                                <div class="product-seller-action"><a href="#" class="btn btn-outline-danger">افزودن به
-                                        سبد</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end sellers -->
                 <!-- product-tab-content -->
                 <div class="row mb-5">
                     <div class="col-12">

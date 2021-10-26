@@ -40,6 +40,9 @@ class ProductController extends Controller
             'slug'=>make_slug($request->input('title')),
             'price'=>$request->input('price'),
             'description'=>$request->input('description'),
+            'title_en'=>$request->input('title_en'),
+            'guaranty'=>$request->input('guaranty'),
+            'product_count'=>$request->input('product_count'),
             'image'=>$fileName,
             'category_id'=>$request->input('category_id'),
             'brand_id'=>$request->input('brand_id')
@@ -78,6 +81,9 @@ class ProductController extends Controller
             'slug'=>make_slug($request->input('title')),
             'price'=>$request->input('price'),
             'description'=>$request->input('description'),
+            'title_en'=>$request->input('title_en'),
+            'guaranty'=>$request->input('guaranty'),
+            'product_count'=>$request->input('product_count'),
             'image'=>$fileName,
             'category_id'=>$request->input('category_id'),
             'brand_id'=>$request->input('brand_id')
