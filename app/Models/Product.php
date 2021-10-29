@@ -32,4 +32,14 @@ class Product extends Model
     {
        return $this->belongsTo(Brand::class);
     }
+
+    public function galleries()
+    {
+       return $this->hasMany(Gallery::class);
+    }
+
+    public function colors()
+    {
+        return $this->belongsTo(Color::class);
+    }
 }

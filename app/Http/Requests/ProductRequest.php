@@ -26,7 +26,7 @@ class ProductRequest extends FormRequest
         return [
             'title'=>'required',
             'price'=>'required|numeric',
-            'image'=>'required|mimes:png,jpg,jpeg,svg',
+            'image'=>'required',
             'category_id'=>'required|exists:categories,id',
             'brand_id'=>'required|exists:brands,id',
         ];

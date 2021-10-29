@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{url('panel/plugins/select2/select2.min.css')}}">
     <link rel="stylesheet" href="{{url('panel/plugins/sweet_alert/sweetalert2.min.css')}}">
     <link rel="stylesheet" href="{{url('panel/dist/css/custom-style.css')}}">
+    <link rel="stylesheet" href="{{url('panel/plugins/dropzone/css/dropzone.css')}}">
+    <link rel="stylesheet" href="{{url('panel/plugins/colorpicker/css/bootstrap-colorpicker.min.css')}}">
     <link rel="stylesheet" href="{{url('css/custom.css')}}">
 </head>
 
@@ -29,14 +31,12 @@
 </div>
 <!-- jQuery -->
 <script src="{{url('panel/plugins/jquery/jquery.min.js')}}"></script>
-<!-- Bootstrap 4 -->
 <script src="{{url('panel/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<!-- AdminLTE App -->
 <script src="{{url('panel/dist/js/adminlte.min.js')}}"></script>
-
 <script src="{{url('panel/plugins/select2/select2.full.min.js')}}"></script>
-
 <script src="{{url('panel/plugins/sweet_alert/sweetalert2.all.min.js')}}"></script>
+<script src="{{url('panel/plugins/dropzone/js/dropzone.js')}}"></script>
+<script src="{{url('panel/plugins/colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
 <script src="{{url('js/custom.js')}}"></script>
 
 <script>

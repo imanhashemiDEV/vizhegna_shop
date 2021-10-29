@@ -88,6 +88,30 @@
                             </li>
                         </ul>
                     </li>
+
+                    <li class="nav-item has-treeview menu-open">
+                        <a href="#" class="nav-link active">
+                            <i class="nav-icon fa fa-folder"></i>
+                            <p>
+                                رنگ ها
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{route('colors.create')}}" class="nav-link">
+                                    <i class="fa fa-plus-circle nav-icon"></i>
+                                    <p>رنگ جدید</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('colors.index')}}" class="nav-link">
+                                    <i class="fa fa-list nav-icon"></i>
+                                    <p>لیست رنگ ها</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

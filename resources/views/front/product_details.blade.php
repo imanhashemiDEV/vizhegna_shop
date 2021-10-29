@@ -25,76 +25,24 @@
                             <div class="product-gallery">
                                 <div class="swiper-container gallery-slider pb-md-0 pb-3">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/01.png')}}"
-                                                 data-large="{{url('front/images/gallery/01.png')}}" class="zoom-image"
-                                                 alt="gallery item">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/02.png')}}"
-                                                 data-large="{{url('front/images/gallery/02.png')}}" class="zoom-image"
-                                                 alt="gallery item">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/03.png')}}"
-                                                 data-large="{{url('front/images/gallery/03.png')}}" class="zoom-image"
-                                                 alt="gallery item">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/04.png')}}"
-                                                 data-large="{{url('')}}" class="zoom-image"
-                                                 alt="gallery item">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/05.png')}}"
-                                                 data-large="{{url('front/images/gallery/05.png')}}" class="zoom-image"
-                                                 alt="gallery item">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/06.png')}}"
-                                                 data-large="{{url('front/images/gallery/06.png')}}" class="zoom-image"
-                                                 alt="gallery item">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/07.png')}}"
-                                                 data-large="{{url('front/images/gallery/07.png')}}" class="zoom-image"
-                                                 alt="gallery item">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/08.png')}}"
-                                                 data-large="{{url('front/images/gallery/08.png')}}" class="zoom-image"
-                                                 alt="gallery item">
-                                        </div>
+                                        @foreach($product->galleries as $gallery)
+                                            <div class="swiper-slide">
+                                                <img src="{{url("/images/products/").'/'.$gallery->image}}"
+                                                     data-large="{{url('/images/products/').'/'.$gallery->image}}" class="zoom-image"
+                                                     alt="gallery item">
+                                            </div>
+                                        @endforeach
                                     </div>
                                     <!-- Add Pagination -->
                                     <div class="swiper-pagination d-md-none"></div>
                                 </div>
                                 <div class="swiper-container gallery-slider-thumbs d-md-block d-none">
                                     <div class="swiper-wrapper">
+                                        @foreach($product->galleries as $gallery)
                                         <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/01.png')}}" alt="gallery item">
+                                            <img src="{{url('/images/products/').'/'.$gallery->image}}" alt="gallery item">
                                         </div>
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/02.png')}}" alt="gallery item">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/03.png')}}" alt="gallery item">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/04.png')}}" alt="gallery item">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/05.png')}}" alt="gallery item">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/06.png')}}" alt="gallery item">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/07.png')}}" alt="gallery item">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="{{url('front/images/gallery/08.png')}}" alt="gallery item">
-                                        </div>
+                                        @endforeach
                                     </div>
                                     <!-- Add Arrows -->
                                     <div class="swiper-button-next"></div>
