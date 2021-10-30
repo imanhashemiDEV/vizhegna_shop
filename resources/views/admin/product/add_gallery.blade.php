@@ -23,7 +23,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form" class="dropzone" method="POST" action="{{route('store.product.gallery',$product->id)}}">
+                        <form role="form" class="dropzone border border-primary " method="POST" action="{{route('store.product.gallery',$product->id)}}">
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
@@ -35,25 +35,26 @@
                                 </div>
                             </div>
                         </form>
-
-                        <div class="row mt-5">
-                            @foreach($product->galleries as $gallery)
-                            <div class="col-md-4  d-flex justify-content-center border align-middle">
-                                <img src="{{url('/images/products/'.$gallery->image)}}" style="width: 100px;" alt="">
-                                <form action="{{route('delete.product.gallery',$gallery->id)}}" method="POST">
-                                    @csrf
-                                    @method('delete')
-                                    <label>حذف عکس</label>
-                                    <button type="submit"><i class="fa fa-trash"></i></button>
-                                </form>
-                            </div>
-                            @endforeach
-                        </div>
                     </div>
                     <!-- /.card -->
                 </div>
             </div>
             <!-- /.row -->
+            <div class="row mt-5">
+                @foreach($product->galleries as $gallery)
+                    <div class="col-md-4  d-flex justify-content-around border align-items-center">
+                        <img src="{{url('/images/products/'.$gallery->image)}}" style="width: 100px;" alt="">
+                        <form action="{{route('delete.product.gallery',$gallery->id)}}" method="POST">
+                            @csrf
+                            @method('delete')
+                            <div>
+                                <label>حذف عکس</label>
+                                <button type="submit" class="btn btn-info"><i class="fa fa-trash"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                @endforeach
+            </div>
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
