@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('content')
-    @include('admin.partials.breadcrump',[$title="ویرایش دسته بندی"])
+    @include('admin.partials.breadcrump',[$title="ویرایش رنگ"])
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
@@ -19,34 +19,30 @@
                 <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">ویرایش دسته بندی</h3>
+                            <h3 class="card-title">ویرایش رنگ</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form" method="POST" action="{{route('categories.update',$category->id)}}">
+                        <form role="form" method="POST" action="{{route('colors.update',$color->id)}}">
                             @csrf
                             @method('patch')
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label>عنوان دسته بندی</label>
-                                    <input type="text" class="form-control" name="title"  placeholder="عنوان دسته را وارد کنید" value="{{$category->title}}">
+                                    <label>عنوان رنگ</label>
+                                    <input type="text" class="form-control" name="title" value="{{$color->title}}"
+                                           placeholder="عنوان رنگ را وارد کنید">
                                 </div>
-                                <div class="form-group">
-                                    <label>دسته پدر</label>
-                                    <select class="form-select select2 p-4 select2-hidden-accessible" name="parent_id" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                        <option selected="selected" value="0">دسته اصلی</option>
-                                        @foreach($categories as $key=>$value)
-                                            @if($category->parent_id==$key)
-                                                <option selected="selected" value="{{$key}}">{{$value}}</option>
-                                            @else
-                                                <option value="{{$key}}">{{$value}}</option>
-                                            @endif
-                                        @endforeach
-                                    </select>
+                                <div id="cp2" class="input-group colorpicker-element" title="Using input value"
+                                     data-colorpicker-id="2">
+                                    <input type="text" class="form-control input-lg" name="code" value="{{$color->code}}">
+                                    <span class="input-group-append">
+                                    <span class="input-group-text colorpicker-input-addon" data-original-title="" title="" tabindex="0"><i
+                                            style="background: rgb(135, 85, 89);"></i></span>
+                                    </span>
                                 </div>
+
                             </div>
                             <!-- /.card-body -->
-
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">ویرایش</button>
                             </div>
@@ -60,4 +56,10 @@
     </div>
     <!-- /.content -->
 @endsection
-
+@section('scripts')
+    <script>
+        $(function () {
+            $('#cp2').colorpicker();
+        });
+    </script>
+@endsection

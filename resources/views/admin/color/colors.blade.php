@@ -31,18 +31,18 @@
                                     <th class="text-primary text-center align-middle">ویرایش</th>
                                     <th class="text-primary text-center align-middle">حذف</th>
                                 </tr>
-                                @foreach($categories as $category)
+                                @foreach($colors as $color)
                                     <tr>
                                         <td class="text-center align-middle">{{$i++}}</td>
-                                        <td class="text-center align-middle">{{$category->title}}</td>
-                                        <td class="text-center align-middle">{{$category->code}}</td>
+                                        <td class="text-center align-middle">{{$color->title}}</td>
+                                        <td class="text-center align-middle">{{$color->code}}</td>
                                         <td class="text-center align-middle">
-                                            <a class="btn btn-app" href="{{route('categories.edit',$category->id)}}">
+                                            <a class="btn btn-app" href="{{route('colors.edit',$color->id)}}">
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>
                                         </td>
                                         <td class="text-center align-middle">
-                                            <a class="btn btn-app" onclick="deleteItem({{$category->id}})">
+                                            <a class="btn btn-app" onclick="deleteItem({{$color->id}})">
                                                 <i class="fa fa-trash"></i> حذف
                                             </a>
                                         </td>
@@ -52,9 +52,8 @@
                             </table>
                         </div>
                         <div class="pagination pagination-sm m-0  d-flex justify-content-center">
-                            <p class="page-item "> {{$categories->appends(Request::except('page'))->links()}}</p>
+                            <p class="page-item "> {{$colors->appends(Request::except('page'))->links()}}</p>
                         </div>
-
                         <!-- /.card-body -->
                     </div>
                     <!-- /.card -->
@@ -69,7 +68,7 @@
     <script>
             function deleteItem(id) {
                 Swal.fire({
-                    title: 'حذف دسته بندی',
+                    title: 'حذف رنگ',
                     text: "آیا از حذف مطمئن هستید؟",
                     icon: 'warning',
                     showCancelButton: true,
@@ -88,7 +87,7 @@
 
                         $.ajax(
                             {
-                                url: url + "/admin/categories/"+id,
+                                url: url + "/admin/colors/"+id,
                                 type: 'delete',
                                 dataType: "JSON",
                                 data: {
@@ -97,8 +96,8 @@
                                 success: function (response)
                                 {
                                     Swal.fire(
-                                        'دسته حذف شد',
-                                        'دسته مورد نظر با موفقیت حذف شد',
+                                        'رنگ حذف شد',
+                                        'رنگ مورد نظر با موفقیت حذف شد',
                                         'باشه'
                                     );
                                 },

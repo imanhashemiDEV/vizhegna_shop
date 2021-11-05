@@ -23,7 +23,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form" method="POST" action="{{route('categories.store')}}">
+                        <form role="form" method="POST" action="{{route('colors.store')}}">
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
