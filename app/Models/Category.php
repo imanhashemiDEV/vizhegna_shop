@@ -36,4 +36,9 @@ class Category extends Model
         $children = $this->child()->pluck('id');
         return Product::query()->whereIn('category_id',$children)->get();
     }
+
+    public function property_groups()
+    {
+        return $this->hasMany(PropertyGroup::class);
+    }
 }

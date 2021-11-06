@@ -130,16 +130,11 @@
                                     <span class="d-block mb-3">رنگ:</span>
                                     <div class="input-radio-color">
                                         <div class="input-radio-color__list">
+                                            @foreach($product->colors as $color)
                                             <label class="input-radio-color__item input-radio-color__item--white"
-                                                   style="color: #fff;">
+                                                   style="color:{{$color->code}};">
                                                 <input type="radio" name="color"> <span></span></label>
-                                            <label class="input-radio-color__item" style="color: #ffd333;">
-                                                <input type="radio" name="color"> <span></span></label>
-                                            <label class="input-radio-color__item" style="color: #ff4040;">
-                                                <input type="radio" name="color"> <span></span></label>
-                                            <label class="input-radio-color__item input-radio-color__item--disabled"
-                                                   style="color: #4080ff;">
-                                                <input type="radio" name="color" disabled=""> <span></span></label>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>

@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('content')
-    @include('admin.partials.breadcrump',[$title="لیست رنگ ها"])
+    @include('admin.partials.breadcrump',[$title="لیست گروه مشخصات فنی"])
 
     <div class="content">
         <div class="container-fluid">
@@ -18,7 +18,7 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">لیست رنگ ها</h3>
+                            <h3 class="card-title">لیست گروه مشخصات فنی</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body table-responsive p-0">
@@ -26,23 +26,23 @@
                                 <tbody>
                                 <tr>
                                     <th class="text-primary text-center align-middle">ردیف</th>
-                                    <th class="text-primary text-center align-middle">عنوان رنگ</th>
-                                    <th class="text-primary text-center align-middle">کد رنگ</th>
+                                    <th class="text-primary text-center align-middle">عنوان گروه مشخصات فنی</th>
+                                    <th class="text-primary text-center align-middle">دسته بندی</th>
                                     <th class="text-primary text-center align-middle">ویرایش</th>
                                     <th class="text-primary text-center align-middle">حذف</th>
                                 </tr>
-                                @foreach($colors as $color)
+                                @foreach($property_groups as $property_group)
                                     <tr>
                                         <td class="text-center align-middle">{{$i++}}</td>
-                                        <td class="text-center align-middle">{{$color->title}}</td>
-                                        <td class="text-center align-middle">{{$color->code}}</td>
+                                        <td class="text-center align-middle">{{$property_group->title}}</td>
+                                        <td class="text-center align-middle">{{$property_group->category->title}}</td>
                                         <td class="text-center align-middle">
-                                            <a class="btn btn-app" href="{{route('colors.edit',$color->id)}}">
+                                            <a class="btn btn-app" href="{{route('property_groups.edit',$property_group->id)}}">
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>
                                         </td>
                                         <td class="text-center align-middle">
-                                            <a class="btn btn-app" onclick="deleteItem({{$color->id}})">
+                                            <a class="btn btn-app" onclick="deleteItem({{$property_group->id}})">
                                                 <i class="fa fa-trash"></i> حذف
                                             </a>
                                         </td>
@@ -52,8 +52,9 @@
                             </table>
                         </div>
                         <div class="pagination pagination-sm m-0  d-flex justify-content-center">
-                            <p class="page-item "> {{$colors->appends(Request::except('page'))->links()}}</p>
+                            <p class="page-item "> {{$property_groups->appends(Request::except('page'))->links()}}</p>
                         </div>
+
                         <!-- /.card-body -->
                     </div>
                     <!-- /.card -->
@@ -68,7 +69,7 @@
     <script>
             function deleteItem(id) {
                 Swal.fire({
-                    title: 'حذف رنگ',
+                    title: 'حذف گروه مشخصات فنی',
                     text: "آیا از حذف مطمئن هستید؟",
                     icon: 'warning',
                     showCancelButton: true,
@@ -87,7 +88,7 @@
 
                         $.ajax(
                             {
-                                url: url + "/admin/colors/"+id,
+                                url: url + "/admin/property_groups/"+id,
                                 type: 'delete',
                                 dataType: "JSON",
                                 data: {
@@ -96,8 +97,8 @@
                                 success: function (response)
                                 {
                                     Swal.fire(
-                                        'رنگ حذف شد',
-                                        'رنگ مورد نظر با موفقیت حذف شد',
+                                        'گروه مشخصات فنی حذف شد',
+                                        'گروه مشخصات فنی مورد نظر با موفقیت حذف شد',
                                         'باشه'
                                     );
                                 },

@@ -5,17 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Color extends Model
+class PropertyGroup extends Model
 {
     use HasFactory;
 
     protected $fillable=[
-        'title',
-        'code'
+        'title','category_id'
     ];
 
-    public function products()
+    public function category()
     {
-        return $this->belongsToMany(Product::class,'color_product');
+        return $this->belongsTo(Category::class);
     }
 }
