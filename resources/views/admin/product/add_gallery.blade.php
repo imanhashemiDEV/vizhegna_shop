@@ -42,7 +42,7 @@
             <!-- /.row -->
             <div class="row mt-5">
                 @foreach($product->galleries as $gallery)
-                    <div class="col-md-4  d-flex justify-content-around border align-items-center">
+                    <div class="col-md-4  d-flex justify-content-around align-items-center border border-danger p-2">
                         <img src="{{url('/images/products/'.$gallery->image)}}" style="width: 100px;" alt="">
                         <form action="{{route('delete.product.gallery',$gallery->id)}}" method="POST">
                             @csrf
