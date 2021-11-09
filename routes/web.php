@@ -22,6 +22,7 @@ Route::prefix('admin')->group(function (){
     Route::delete('/delete_product_gallery/{id}',[\App\Http\Controllers\Admin\GalleryController::class,'deleteGallery'])->name('delete.product.gallery');
     Route::resource('/colors', \App\Http\Controllers\Admin\ColorController::class);
     Route::resource('/property_groups', \App\Http\Controllers\Admin\PropertyGroupController::class);
+    Route::resource('/properties',\App\Http\Controllers\Admin\PropertyController::class);
 });
 
 
