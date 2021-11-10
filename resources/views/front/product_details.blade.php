@@ -461,173 +461,25 @@
                                 <div class="tab-pane fade" id="productParams" role="tabpanel"
                                      aria-labelledby="productParams-tab">
                                     <div class="product-params">
+                                        @foreach($product->category->property_groups as $group)
                                         <section>
-                                            <h3 class="params-title">مشخصات کلی</h3>
+                                            <h3 class="params-title">{{$group->title}}</h3>
                                             <ul class="params-list">
+                                                @foreach($group->properties as $property)
                                                 <li>
                                                     <div class="params-list-key">
-                                                        <span>ابعاد</span>
+                                                        <span>{{$property->title}}</span>
                                                     </div>
                                                     <div class="params-list-value">
                                                         <span>
-                                                            7.8 × 74.7 × 158.5 میلی‌متر
+                                                           {{$property->getProductValue($product->id)}}
                                                         </span>
                                                     </div>
                                                 </li>
-                                                <li>
-                                                    <div class="params-list-key">
-                                                        <span>توضیحات سیم کارت</span>
-                                                    </div>
-                                                    <div class="params-list-value">
-                                                        <span>
-                                                            سایز نانو (8.8 × 12.3 میلی‌متر)
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="params-list-key">
-                                                        <span>وزن</span>
-                                                    </div>
-                                                    <div class="params-list-value">
-                                                        <span>
-                                                            166 گرم
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="params-list-key">
-                                                        <span>ویژگی‌های خاص</span>
-                                                    </div>
-                                                    <div class="params-list-value">
-                                                        <span>
-                                                            مناسب عکاسی , فبلت , مجهز به حس‌گر اثرانگشت , مناسب عکاسی
-                                                            سلفی
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="params-list-key">
-                                                        <span>تعداد سیم کارت</span>
-                                                    </div>
-                                                    <div class="params-list-value">
-                                                        <span>
-                                                            دو سیم کارت
-                                                        </span>
-                                                    </div>
-                                                </li>
+                                                @endforeach
                                             </ul>
                                         </section>
-                                        <section>
-                                            <h3 class="params-title">پردازنده</h3>
-                                            <ul class="params-list">
-                                                <li>
-                                                    <div class="params-list-key">
-                                                        <span>تراشه</span>
-                                                    </div>
-                                                    <div class="params-list-value">
-                                                        <span>
-                                                            Exynos 7904 (14 nm) Chipset
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="params-list-key">
-                                                        <span>پردازنده ی مرکزی</span>
-                                                    </div>
-                                                    <div class="params-list-value">
-                                                        <span>
-                                                            Dual--Core Cortex-A73 + Hexa-Core Cortex-A53 CPU
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="params-list-key">
-                                                        <span>نوع پردازنده</span>
-                                                    </div>
-                                                    <div class="params-list-value">
-                                                        <span>
-                                                            64 بیت
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="params-list-key">
-                                                        <span>فرکانس پردازنده‌ی مرکزی</span>
-                                                    </div>
-                                                    <div class="params-list-value">
-                                                        <span>
-                                                            1.6 و 1.8 گیگاهرتز
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="params-list-key">
-                                                        <span>پردازنده ی گرافیکی</span>
-                                                    </div>
-                                                    <div class="params-list-value">
-                                                        <span>
-                                                            Mali-G71 MP2 GPU
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </section>
-                                        <section>
-                                            <h3 class="params-title">سایر مشخصات</h3>
-                                            <ul class="params-list">
-                                                <li>
-                                                    <div class="params-list-key">
-                                                        <span>حس‌گرها</span>
-                                                    </div>
-                                                    <div class="params-list-value">
-                                                        <span>
-                                                            قطب‌نما (Compass) , شتاب‌سنج (Accelerometer) , مجاورت
-                                                            (Proximity) , اثرانگشت
-                                                            زیر صفحه نمایش (FingerPrint|Under-Display)
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="params-list-key">
-                                                        <span>باتری قابل تعویض</span>
-                                                    </div>
-                                                    <div class="params-list-value">
-                                                        <span>
-                                                            خیر
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="params-list-key">
-                                                        <span>مشخصات باتری</span>
-                                                    </div>
-                                                    <div class="params-list-value">
-                                                        <span>
-                                                            باتری از نوع لیتیوم پلیمری با ظرفیت 4000 میلی‌ آمپر ساعت
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="params-list-key"></div>
-                                                    <div class="params-list-value">
-                                                        <span>
-                                                            امکان شارژ سریع باتری با توان 15 وات (Fast battery charging
-                                                            15W)
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="params-list-key">
-                                                        <span>اقلام همراه گوشی</span>
-                                                    </div>
-                                                    <div class="params-list-value">
-                                                        <span>
-                                                            دفترچه‌ راهنما , کابل USB , شارژر
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </section>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="productComments" role="tabpanel"

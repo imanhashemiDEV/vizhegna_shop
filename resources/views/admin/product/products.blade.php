@@ -51,7 +51,7 @@
                                         <td class="text-center align-middle">{{$product->brand->title}}</td>
                                         <td class="text-center align-middle">{{\Hekmatinasser\Verta\Verta::instance($product->created_at)->format('%B %d، %Y')}}</td>
                                         <td class="text-center align-middle">
-                                            <a class="btn btn-app" href="{{route('add.product.properties',$product->id)}}">
+                                            <a class="btn btn-app" href="{{route('create.product.properties',$product->id)}}">
                                                 <i class="fa fa-picture-o"></i> ویژگی ها
                                             </a>
                                         </td>

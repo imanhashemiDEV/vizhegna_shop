@@ -18,4 +18,21 @@ class Property extends Model
     {
         return $this->belongsTo(PropertyGroup::class,'property_group_id','id');
     }
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class,'product_property')
+            ->withPivot(['value']);
+    }
+
+    public function getProductValue($id)
+    {
+        $result = $this->products()->where('product_id',$id);
+
+        if(!$result->exists()){
+           return null;
+        }
+
+        return $result->first()->pivot->value;
+    }
 }

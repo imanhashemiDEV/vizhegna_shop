@@ -8,6 +8,7 @@ use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Color;
 use App\Models\Product;
+use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
@@ -110,9 +111,25 @@ class ProductController extends Controller
         $product->delete();
     }
 
-    public function addProductProperties($id)
+    public function createProductProperties($id)
     {
         $product = Product::query()->find($id);
         return view('admin.product.add_properties',compact('product'));
+    }
+
+    public function storeProductProperties(Request $request,$id)
+    {
+        $product =Product::query()->find($id);
+
+
+        $prop = collect($request->get('properties'))->filter(function ($item){
+            if(!empty($item['value'])){
+                return $item;
+            }
+        });
+
+        $product->properties()->sync($prop);
+
+        return redirect()->back()->with('message', 'ویژگی های محصول با موفقیت ثبت شد');
     }
 }

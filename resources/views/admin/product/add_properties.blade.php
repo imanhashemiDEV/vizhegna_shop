@@ -11,7 +11,7 @@
     <div class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 offset-3">
+                <div class="col-md-12">
 
                     @if(Session::has('message'))
                         <div class="alert alert-success alert-dismissible">
@@ -29,20 +29,26 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form" method="POST" action="{{route('products.store')}}"
+                        <form role="form" method="POST" action="{{route('store.product.properties',$product->id)}}"
                               enctype="multipart/form-data">
                             @csrf
                             <div class="card-body">
-
                                 @foreach($product->category->property_groups as $property_group)
-                                    <label>{{$property_group->title}}</label>
-                                    @foreach( $property_group->properties as $property)
-                                        <div class="form-group">
-                                            <label>{{$property->title}}</label>
-                                            <input type="text" class="form-control" name="title"
-                                                   placeholder="عنوان محصول را وارد کنید">
-                                        </div>
-                                    @endforeach
+                                    <h3>{{$property_group->title}}</h3>
+                                    <div class="row">
+                                        @foreach($property_group->properties as $property)
+                                            <div class="form-group col-sm-4">
+                                                <div class="row mt-2">
+                                                    <div class="col-sm-4">
+                                                        <label for="title">{{$property->title}}:</label>
+                                                    </div>
+                                                    <div class="col-sm-8 padding-0-18">
+                                                        <input type="text" class="form-control" value="{{$property->getProductValue($product->id)}}" name="properties[{{$property->id}}][value]">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
                                 @endforeach
 
                             </div>

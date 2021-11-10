@@ -21,7 +21,6 @@ class CreateProductPropertyTable extends Migration
             $table->foreign('property_id')->references('id')
                 ->on('properties')->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('value')->nullable();
-            $table->timestamps();
         });
     }
 
