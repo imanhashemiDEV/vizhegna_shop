@@ -23,6 +23,7 @@ Route::prefix('admin')->group(function (){
     Route::resource('/colors', \App\Http\Controllers\Admin\ColorController::class);
     Route::resource('/property_groups', \App\Http\Controllers\Admin\PropertyGroupController::class);
     Route::resource('/properties',\App\Http\Controllers\Admin\PropertyController::class);
+    Route::get('/product_properties/{id}',[\App\Http\Controllers\Admin\ProductController::class,'addProductProperties'])->name('add.product.properties');
 });
 
 

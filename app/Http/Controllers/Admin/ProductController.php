@@ -109,4 +109,10 @@ class ProductController extends Controller
         unlink($path);
         $product->delete();
     }
+
+    public function addProductProperties($id)
+    {
+        $product = Product::query()->find($id);
+        return view('admin.product.add_properties',compact('product'));
+    }
 }

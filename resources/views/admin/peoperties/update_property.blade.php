@@ -23,7 +23,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form" method="POST" action="{{route('properties.update',$property_group->id)}}">
+                        <form role="form" method="POST" action="{{route('properties.update',$property->id)}}">
                             @csrf
                             @method('patch')
                             <div class="card-body">
@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>عنوان مشخصات فنی</label>
-                                    <input type="text" class="form-control" name="title"  placeholder="عنوان مشخصات فنی را وارد کنید" value="{{$property_group->title}}">
+                                    <input type="text" class="form-control" name="title"  placeholder="عنوان مشخصات فنی را وارد کنید" value="{{$property->title}}">
                                 </div>
                             </div>
                             <!-- /.card-body -->

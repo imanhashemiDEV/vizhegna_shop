@@ -16,6 +16,6 @@ class Property extends Model
 
     public function property_groups()
     {
-        return $this->belongsTo(PropertyGroup::class);
+        return $this->belongsTo(PropertyGroup::class,'property_group_id','id');
     }
 }

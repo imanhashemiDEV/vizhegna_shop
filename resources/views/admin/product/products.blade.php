@@ -33,6 +33,7 @@
                                     <th class="text-primary text-center align-middle">عنوان دسته بندی</th>
                                     <th class="text-primary text-center align-middle">عنوان برند</th>
                                     <th class="text-primary text-center align-middle">تاریخ ایجاد</th>
+                                    <th class="text-primary text-center align-middle">ویژگی ها</th>
                                     <th class="text-primary text-center align-middle">گالری</th>
                                     <th class="text-primary text-center align-middle">ویرایش</th>
                                     <th class="text-primary text-center align-middle">حذف</th>
@@ -49,6 +50,11 @@
                                         <td class="text-center align-middle">{{$product->category->title}}</td>
                                         <td class="text-center align-middle">{{$product->brand->title}}</td>
                                         <td class="text-center align-middle">{{\Hekmatinasser\Verta\Verta::instance($product->created_at)->format('%B %d، %Y')}}</td>
+                                        <td class="text-center align-middle">
+                                            <a class="btn btn-app" href="{{route('add.product.properties',$product->id)}}">
+                                                <i class="fa fa-picture-o"></i> ویژگی ها
+                                            </a>
+                                        </td>
                                         <td class="text-center align-middle">
                                             <a class="btn btn-app" href="{{route('create.product.gallery',$product->id)}}">
                                                 <i class="fa fa-picture-o"></i> گالری

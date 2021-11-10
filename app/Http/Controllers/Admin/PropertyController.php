@@ -51,12 +51,18 @@ class PropertyController extends Controller
 
     public function update(Request $request, $id)
     {
+        Property::query()->find($id)->update([
+            'title'=>$request->title,
+            'property_group_id'=>$request->property_group_id
+        ]);
+
         return redirect()->back()->with('message',' ویژگی با موفقیت ویرایش شد');
+
     }
 
 
     public function destroy($id)
     {
-        //
+        Property::destroy($id);
     }
 }

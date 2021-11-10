@@ -35,7 +35,7 @@
                                     <tr>
                                         <td class="text-center align-middle">{{$i++}}</td>
                                         <td class="text-center align-middle">{{$property->title}}</td>
-                                        <td class="text-center align-middle">{{$property->id}}</td>
+                                        <td class="text-center align-middle">{{$property->property_groups->title}}</td>
                                         <td class="text-center align-middle">
                                             <a class="btn btn-app" href="{{route('properties.edit',$property->id)}}">
                                                 <i class="fa fa-edit"></i> ویرایش
