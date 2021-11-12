@@ -11,7 +11,7 @@ Route::get('/product_detail/{id}',[\App\Http\Controllers\Front\FrontProductContr
 
 
 // Admin Routes
-Route::prefix('admin')->group(function (){
+Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function (){
 
     Route::get('/',[\App\Http\Controllers\Admin\PanelController::class,'index'])->name('admin.dashboard');
     Route::resource('/categories', \App\Http\Controllers\Admin\CategoryController::class);
@@ -26,6 +26,10 @@ Route::prefix('admin')->group(function (){
     Route::get('/create_product_properties/{id}',[\App\Http\Controllers\Admin\ProductController::class,'createProductProperties'])->name('create.product.properties');
     Route::post('/store_product_properties/{id}',[\App\Http\Controllers\Admin\ProductController::class,'storeProductProperties'])->name('store.product.properties');
     Route::resource('users',\App\Http\Controllers\Admin\UserController::class);
+    Route::resource('/roles',\App\Http\Controllers\Admin\RoleController::class);
+    Route::get('/create_role_permissions/{id}',[\App\Http\Controllers\Admin\RoleController::class,'createRolePermission'])->name('create.role.permission');
+    Route::post('/store_role_permissions/{id}',[\App\Http\Controllers\Admin\RoleController::class,'storeRolePermission'])->name('store.role.permission');
+    Route::resource('/permissions',\App\Http\Controllers\Admin\PermissionController::class);
 });
 
 

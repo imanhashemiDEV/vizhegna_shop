@@ -1,12 +1,6 @@
 @extends('admin.layouts.master')
 @section('content')
-    <style>
-        .select2-container--default .select2-selection--multiple .select2-selection__choice {
-            background-color: #28a745;
-            border-color: #3d9970;
-        }
-    </style>
-    @include('admin.partials.breadcrump',[$title="ویرایش کاربر"])
+    @include('admin.partials.breadcrump',[$title="ویرایش مجوز"])
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
@@ -26,26 +20,18 @@
                 <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">ویرایش کاربر</h3>
+                            <h3 class="card-title">ویرایش مجوز</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form" method="POST" action="{{route('users.update',$user->id)}}"
+                        <form role="form" method="POST" action="{{route('permissions.update',$permission->id)}}"
                               enctype="multipart/form-data">
                             @csrf
                             @method('patch')
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label>نام و نام خانوادگی</label>
-                                    <input type="text" class="form-control" name="name"  value="{{$user->name}}" placeholder="نام و نام خانوادگی را وارد کنید">
-                                </div>
-                                <div class="form-group">
-                                    <label>ایمیل</label>
-                                    <input type="email" class="form-control" name="email" value="{{$user->email}}"  placeholder="ایمیل را وارد کنید">
-                                </div>
-                                <div class="form-group">
-                                    <label>پسورد</label>
-                                    <input type="password" class="form-control" name="password"  placeholder="پسورد را وارد کنید">
+                                    <label>عنوان مجوز</label>
+                                    <input type="text" class="form-control" name="name"  value="{{$permission->name}}" placeholder="عنوان مجوز را وارد کنید">
                                 </div>
                             </div>
                             <!-- /.card-body -->

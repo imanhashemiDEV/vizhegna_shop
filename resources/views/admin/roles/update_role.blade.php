@@ -6,7 +6,7 @@
             border-color: #3d9970;
         }
     </style>
-    @include('admin.partials.breadcrump',[$title="ویرایش کاربر"])
+    @include('admin.partials.breadcrump',[$title="ویرایش نقش"])
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
@@ -26,26 +26,18 @@
                 <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">ویرایش کاربر</h3>
+                            <h3 class="card-title">ویرایش نقش</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form" method="POST" action="{{route('users.update',$user->id)}}"
+                        <form role="form" method="POST" action="{{route('roles.update',$role->id)}}"
                               enctype="multipart/form-data">
                             @csrf
                             @method('patch')
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label>نام و نام خانوادگی</label>
-                                    <input type="text" class="form-control" name="name"  value="{{$user->name}}" placeholder="نام و نام خانوادگی را وارد کنید">
-                                </div>
-                                <div class="form-group">
-                                    <label>ایمیل</label>
-                                    <input type="email" class="form-control" name="email" value="{{$user->email}}"  placeholder="ایمیل را وارد کنید">
-                                </div>
-                                <div class="form-group">
-                                    <label>پسورد</label>
-                                    <input type="password" class="form-control" name="password"  placeholder="پسورد را وارد کنید">
+                                    <label>عنوان نقش</label>
+                                    <input type="text" class="form-control" name="name"  value="{{$role->name}}" placeholder="عنوان نقش را وارد کنید">
                                 </div>
                             </div>
                             <!-- /.card-body -->

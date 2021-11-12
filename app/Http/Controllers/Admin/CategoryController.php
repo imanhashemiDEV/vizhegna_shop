@@ -11,34 +11,21 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class CategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $categories = Category::query()->paginate(10);
         return  view('admin.category.categories',compact('categories'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         $categories=Category::query()->pluck('title','id');
         return view('admin.category.create_category',compact('categories'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(CategoryRequest $request)
     {
         $category = Category::query()->create([
@@ -50,23 +37,13 @@ class CategoryController extends Controller
         return redirect()->back()->with('message','دسته بندی با موفقیت اضافه شد');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         $category = Category::query()->find($id);

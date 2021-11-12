@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('content')
-@include('admin.partials.breadcrump',[$title="ایجاد کاربر"])
+@include('admin.partials.breadcrump',[$title="ایجاد مجوزهای نقش"])
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
@@ -19,25 +19,20 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">ایجاد کاربر</h3>
+                            <h3 class="card-title">ایجاد مجوزهای نقش</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form" method="POST" action="{{route('users.store')}}" enctype="multipart/form-data">
+                        <form role="form" method="POST" action="{{route('store.role.permission',$role->id)}}" enctype="multipart/form-data">
                             @csrf
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label>نام و نام خانوادگی</label>
-                                    <input type="text" class="form-control" name="name"  placeholder="نام و نام خانوادگی را وارد کنید">
+                                <label>{{$role->name}}</label>
+                                @foreach($permissions as $permission)
+                                <div class="form-check">
+                                    <input @if($role->hasPermissionTo($permission->name)) checked  @endif type="checkbox" name="permissions[]" value="{{$permission->name}}" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">{{$permission->name}}</label>
                                 </div>
-                                <div class="form-group">
-                                    <label>ایمیل</label>
-                                    <input type="email" class="form-control" name="email"  placeholder="ایمیل را وارد کنید">
-                                </div>
-                                <div class="form-group">
-                                    <label>پسورد</label>
-                                    <input type="password" class="form-control" name="password"  placeholder="پسورد را وارد کنید">
-                                </div>
+                                @endforeach
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
@@ -52,13 +47,4 @@
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
-@endsection
-@section('scripts')
-    <script>
-        $('select').select2({
-            dir: "rtl",
-            dropdownAutoWidth: true,
-            dropdownParent: $('#parent')
-        });
-    </script>
 @endsection
