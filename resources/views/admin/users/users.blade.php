@@ -28,6 +28,7 @@
                                     <th class="text-primary text-center align-middle">ردیف</th>
                                     <th class="text-primary text-center align-middle">نام و نام خانوادگی</th>
                                     <th class="text-primary text-center align-middle">ایمیل</th>
+                                    <th class="text-primary text-center align-middle">نقش های کاربر</th>
                                     <th class="text-primary text-center align-middle">ویرایش</th>
                                     <th class="text-primary text-center align-middle">تاریخ ایجاد</th>
                                 </tr>
@@ -36,12 +37,17 @@
                                         <td class="text-center align-middle">{{$i++}}</td>
                                         <td class="text-center align-middle">{{$user->name}}</td>
                                         <td class="text-center align-middle">{{$user->email}}</td>
-                                        <td class="text-center align-middle">{{\Hekmatinasser\Verta\Verta::instance($user->created_at)->format('%B %d، %Y')}}</td>
+                                        <td class="text-center align-middle">
+                                            <a class="btn btn-app" href="{{route('create.user.roles',$user->id)}}">
+                                                <i class="fa fa-user"></i>نقش های کاربر
+                                            </a>
+                                        </td>
                                         <td class="text-center align-middle">
                                             <a class="btn btn-app" href="{{route('users.edit',$user->id)}}">
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>
                                         </td>
+                                        <td class="text-center align-middle">{{\Hekmatinasser\Verta\Verta::instance($user->created_at)->format('%B %d، %Y')}}</td>
                                     </tr>
                                 @endforeach
                                 </tbody>

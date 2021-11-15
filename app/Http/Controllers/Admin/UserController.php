@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
@@ -62,5 +64,19 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function createUserRoles($id)
+    {
+        $user = User::query()->find($id);
+        $roles = Role::query()->get();
+        return view('admin.users.create_user_roles',compact('user','roles'));
+    }
+
+    public function storeUserRoles(Request $request , $id)
+    {
+        $user = User::query()->find($id);
+        $user->syncRoles($request->roles);
+        return redirect()->back()->with('message','نقش ها با موفقیت به کاربر متصل شدند ');
     }
 }
