@@ -48,4 +48,9 @@ class Product extends Model
         return $this->belongsToMany(Property::class,'product_property')
             ->withPivot(['value']);
     }
+
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable')->where('status','1');
+    }
 }

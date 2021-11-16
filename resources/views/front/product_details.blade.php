@@ -281,180 +281,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="card">
-                                                <div class="card-header" id="headingTwo">
-                                                    <h5 class="mb-0">
-                                                        <button class="btn collapsed" type="button"
-                                                                data-toggle="collapse" data-target="#collapseTwo"
-                                                                aria-expanded="false" aria-controls="collapseTwo">
-                                                            طراحی
-                                                        </button>
-                                                    </h5>
-                                                </div>
-                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                                     data-parent="#accordionDescription">
-                                                    <div class="card-body">
-                                                        <p>
-                                                            گلکسی A30S با صفحه نمایش 6.4 اینچی، بریدگی های منحنی شکل و
-                                                            حاشیه بسیار کم از
-                                                            لبه ها، چیزی از طراحی پرچم داران سامسونگ کم ندارد. قاب جلویی
-                                                            تا جای ممکن
-                                                            ساده طراحی شده که جلوه زیبایی هم به آن داده است. به دلیل V
-                                                            شکل بودن بریدگی
-                                                            قسمت بالای آن، نام Infinty-V برای آن انتخاب شده است. لبه
-                                                            ‎های گلکسی A30S به
-                                                            صورت کاملا گرد طراحی شده است. قاب پشتی هم در نهایت سادگی و
-
-                                                        </p>
-                                                        <img src="./assets/images/single-product/02.jpg" alt="">
-                                                        <p>
-                                                            کلیدهای کنترل میزان صدا و کلید پاور هر دو در یک سمت گوشی
-                                                            قرار گرفته‎اند تا
-                                                            دسترسی به آن ها آسان تر باشد. درگاه دیگری برای نصب سیم کارت
-                                                            و یا کارت حافظه
-
-                                                        </p>
-                                                        <img src="./assets/images/single-product/03.jpg" alt="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-header" id="headingThree">
-                                                    <h5 class="mb-0">
-                                                        <button class="btn collapsed" type="button"
-                                                                data-toggle="collapse" data-target="#collapseThree"
-                                                                aria-expanded="false" aria-controls="collapseThree">
-                                                            صفحه نمایش
-                                                        </button>
-                                                    </h5>
-                                                </div>
-                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                                     data-parent="#accordionDescription">
-                                                    <div class="card-body">
-                                                        <p>
-                                                            صفحه نمایش 6.4 اینچی سوپر آمولد در گلکسی A30S بسیار زیبا و
-                                                            بلند به نظر
-                                                            می‎رسد. این پنل در کمتر گوشی در این گستره قیمتی دیده می‎شود.
-                                                            در قسمت بالای
-                                                            صفحه نمایش فقط یک دوربین سلفی قرار گرفته است و حاشیه های
-                                                            بالایی و کناری در
-                                                            گلکسی A30S بسیار باریک شده به طوری که صفحه نمایش آن توانسته
-                                                        </p>
-                                                        <img src="{{url('front/images/single-product/04.jpg')}}" alt="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-header" id="headingFour">
-                                                    <h5 class="mb-0">
-                                                        <button class="btn collapsed" type="button"
-                                                                data-toggle="collapse" data-target="#collapseFour"
-                                                                aria-expanded="false" aria-controls="collapseFour">
-                                                            دوربین
-                                                        </button>
-                                                    </h5>
-                                                </div>
-                                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                                                     data-parent="#accordionDescription">
-                                                    <div class="card-body">
-                                                        <p>
-                                                            گلکسی A30S از یک دوربین سه گانه بهره می‎برد؛ دوربین اصلی
-                                                            A30s سنسور 25
-                                                            مگاپیکسلی با دریچه‌ی دیافراگم f/1.7 و فوکوس خودکار (PDAF)
-                                                            است و سنسور 8
-                                                            مگاپیکسلی دیگر از نوع فوق عریض (Ultrawide) با فاصله کانونی
-                                                            لنز 13میلی‌متر
-                                                            است. برخلاف A30 در آن از سنسور عمق استفاده نشده بود، گوشی
-
-                                                        </p>
-                                                        <img src="{{url('front/images/single-product/05.jpg')}}" alt="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-header" id="headingFive">
-                                                    <h5 class="mb-0">
-                                                        <button class="btn collapsed" type="button"
-                                                                data-toggle="collapse" data-target="#collapseFive"
-                                                                aria-expanded="false" aria-controls="collapseFive">
-                                                            سخت افزار و نرم افزار
-                                                        </button>
-                                                    </h5>
-                                                </div>
-                                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
-                                                     data-parent="#accordionDescription">
-                                                    <div class="card-body">
-                                                        <p>
-                                                            سخت افزار به کار رفته در A30s تغییری نسیبت به مدل A30 نداشته
-                                                            است. در گوشی
-                                                            گلکسی A30S هم از تراشه Exynos 7904 و پردازنده گرافیکی Mali
-                                                            G71 MP2 استفاده
-                                                            شده است. تراشه Exynos 7904 استفاده شده در این گوشی با پردازش
-                                                            14 نانومتری
-                                                            ساخته شده و از دو از هسته قدرتمند Cortex-A73 و شش هسته کم
-                                                        </p>
-                                                        <img src="{{url('front/images/single-product/06.jpg')}}" alt="">
-                                                        <p>
-                                                            این گوشی با سیستم‌عامل اندروید نسخه 9.0 به بازار عرضه شده
-                                                            است که سیستم‌عاملی
-                                                            به‌روز است. البته رابط کاربری سامسونگ هم مکمل اندروید 9.0 آن
-                                                            است
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-header" id="headingSix">
-                                                    <h5 class="mb-0">
-                                                        <button class="btn collapsed" type="button"
-                                                                data-toggle="collapse" data-target="#collapseSix"
-                                                                aria-expanded="false" aria-controls="collapseSix">
-                                                            باتری
-                                                        </button>
-                                                    </h5>
-                                                </div>
-                                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
-                                                     data-parent="#accordionDescription">
-                                                    <div class="card-body">
-                                                        <p>
-                                                            این گوشی هوشمند انرژی مورد نیاز خود را از یک باتری 4000 میلی
-                                                            آمپر ساعتی
-                                                            تامین می‎کند و به این معنا است که شارژ کافی برای به اشتراک
-
-                                                        </p>
-                                                        <img src="{{url('front/images/single-product/07.jpg')}}" alt="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div class="card-header" id="headingSeven">
-                                                    <h5 class="mb-0">
-                                                        <button class="btn collapsed" type="button"
-                                                                data-toggle="collapse" data-target="#collapseSeven"
-                                                                aria-expanded="false" aria-controls="collapseSeven">
-                                                            جمع بندی
-                                                        </button>
-                                                    </h5>
-                                                </div>
-                                                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
-                                                     data-parent="#accordionDescription">
-                                                    <div class="card-body">
-                                                        <p>
-                                                            اگر می‌خواهید گوشی داشته باشید که تا مدت‌ها بدون دردسر و
-                                                            مشکل نیازی‌های
-                                                            اولیه‌تان را برطرف کندGalaxy A30S انتخاب خوبی است.
-                                                            صفحه‌نمایش Super AMOLED
-                                                            این گوشی کم نقص است و تجربه مطلوبی را برای کاربر به دنبال
-                                                            دارد. انجام کارهای
-                                                            روزمره هم با این گوشی به‌راحتی انجام می‌شود اما اگر گیمر
-                                                            حرفه‌ای هستید باید
-                                                            به فکر خرید گوشی بالا رده و البته گران‌قیمت‌تری باشید.
-                                                            دوربین سلفی این گوشی
-                                                            هم دیگر مزیت آن است که عکس‌هایی بسیار باکیفیت می‌گیرد. گوشی
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -485,443 +311,77 @@
                                 <div class="tab-pane fade" id="productComments" role="tabpanel"
                                      aria-labelledby="productComments-tab">
                                     <!-- product-review -->
+                                    @if(Session::has('message'))
+                                        <div class="alert alert-success alert-dismissible">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                            {{session('message')}}
+                                        </div>
+                                    @endif
                                     <div class="product-review-form mb-3">
-                                        <form action="#">
-                                            <div class="row align-items-center">
-                                                <div class="col-lg-6">
-                                                    <div class="form-element-row">
-                                                        <label for="phone-number" class="label-element">عنوان نظر شما
-                                                            (اجباری)</label>
-                                                        <input type="text" class="input-element">
+                                       @auth
+                                            <form action="{{route('store.user.comment')}}" method="POST">
+                                                @csrf
+                                                <div class="row align-items-center">
+                                                    <input type="hidden" value="{{$product->id}}" name="product_id">
+                                                    <div class="col-12">
+                                                        <div class="form-element-row">
+                                                            <label for="phone-number" class="label-element">نظر شما</label>
+                                                            <textarea name="body" id="comment" cols="30" rows="10"
+                                                                      class="input-element"></textarea>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label>امتیاز شما:</label>
-                                                        <div class="add-rating">
-                                                            <input type="radio" name="rating" id="rating-1">
-                                                            <label for="rating-1"></label>
-                                                            <input type="radio" name="rating" id="rating-2">
-                                                            <label for="rating-2"></label>
-                                                            <input type="radio" name="rating" id="rating-3">
-                                                            <label for="rating-3"></label>
-                                                            <input type="radio" name="rating" id="rating-4">
-                                                            <label for="rating-4"></label>
-                                                            <input type="radio" name="rating" id="rating-5">
-                                                            <label for="rating-5"></label>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <button class="btn btn-primary px-3">ارسال نظر <i
+                                                                    class="fad fa-comment-alt-edit"></i></button>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-element-row">
-                                                        <label for="phone-number" class="label-element">ایمیل
-                                                            شما</label>
-                                                        <input type="text" class="input-element">
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="form-element-row">
-                                                        <label for="phone-number" class="label-element">نظر شما</label>
-                                                        <textarea name="comment" id="comment" cols="30" rows="10"
-                                                                  class="input-element"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="form-group">
-                                                        <button class="btn btn-primary px-3">ارسال نظر <i
-                                                                class="fad fa-comment-alt-edit"></i></button>
-                                                    </div>
-                                                </div>
+                                            </form>
+                                        @else
+                                            <div class="alert alert-success alert-dismissible">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                برای نظر دادن باید در سایت لاگین کنید
                                             </div>
-                                        </form>
+                                       @endauth
                                         <div class="section-title mb-1 mt-4">
-                                            نظرات کاربران (۵)
+                                            نظرات کاربران
                                         </div>
                                         <hr>
                                     </div>
                                     <div class="comments-list">
+                                        @foreach($product->comments as $comment)
                                         <div class="row">
                                             <div class="col-md-3 aside">
                                                 <ul class="comments-user-shopping">
                                                     <li>
                                                         <div class="cell cell-name">
-                                                            کاربر اینجانب
+                                                            {{$comment->user->name}}
                                                         </div>
                                                         <div class="comments-buyer-badge">خریدار</div>
                                                     </li>
                                                     <li>
                                                         <div class="cell">
-                                                            در تاریخ ۷ فروردین ۱۳۹۹
+                                                            {{$comment->created_at}}
                                                         </div>
                                                     </li>
                                                 </ul>
-                                                <div class="alert alert-info">
-                                                    <i class="fas fa-thumbs-up"></i> خرید این محصول را توصیه می‌کنم
-                                                </div>
-                                                <ul class="comments-user-shopping">
-                                                    <li>
-                                                        <div class="cell cell-title">رنگ:</div>
-                                                        <div class="cell color-cell">
-                                                            <span class="shopping-color-value"
-                                                                  style="background-color: #FFFFFF;"></span>سفید
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cell cell-title">فروشنده:</div>
-                                                        <div class="cell seller-cell">
-                                                            <a href="#" class="border-bottom-dt">زندگیِ مدرن</a>
-                                                        </div>
-                                                    </li>
-                                                </ul>
+{{--                                                <div class="alert alert-info">--}}
+{{--                                                    <i class="fas fa-thumbs-up"></i> خرید این محصول را توصیه می‌کنم--}}
+{{--                                                </div>--}}
                                             </div>
                                             <div class="col-md-9 article">
-                                                <div class="header">
-                                                    <div>راضیم</div>
-                                                </div>
-                                                <p>من ۳روز که خریدم و راضی هستم دوربینش خوبه فقط به نظرم باتری
-                                                    زود تموم میشه البته دائما هم باهاش کار میکنم ولی هر روز
-                                                    شارژش می‌کنم گوشیه خوش دستیه</p>
-                                                <div class="footer">
-                                                    <div class="comments-likes">
-                                                        آیا این نظر برایتان مفید بود؟
-                                                        <button class="btn-like" data-counter="۰">بله</button>
-                                                        <button class="btn-like" data-counter="۰">خیر</button>
-                                                    </div>
-                                                </div>
+                                                <p>{{$comment->body}}</p>
+{{--                                                <div class="footer">--}}
+{{--                                                    <div class="comments-likes">--}}
+{{--                                                        آیا این نظر برایتان مفید بود؟--}}
+{{--                                                        <button class="btn-like" data-counter="۰">بله</button>--}}
+{{--                                                        <button class="btn-like" data-counter="۰">خیر</button>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-3 aside">
-                                                <ul class="comments-user-shopping">
-                                                    <li>
-                                                        <div class="cell cell-name">
-                                                            کاربر اینجانب
-                                                        </div>
-                                                        <div class="comments-buyer-badge">خریدار</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cell">
-                                                            در تاریخ ۷ فروردین ۱۳۹۹
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <div class="alert alert-info">
-                                                    <i class="fas fa-thumbs-up"></i> خرید این محصول را توصیه می‌کنم
-                                                </div>
-                                                <ul class="comments-user-shopping">
-                                                    <li>
-                                                        <div class="cell cell-title">رنگ:</div>
-                                                        <div class="cell color-cell">
-                                                            <span class="shopping-color-value"
-                                                                  style="background-color: #000000;"></span>مشکی
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cell cell-title">فروشنده:</div>
-                                                        <div class="cell seller-cell">
-                                                            <a href="#" class="border-bottom-dt">زندگیِ مدرن</a>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-9 article">
-                                                <div class="header">
-                                                    <div>مدل 128 گیگ با رام 4 پیشنهاد میشه</div>
-                                                </div>
-                                                <p>سلام بعد از چند روز استفاده ازش راضی هستم و فکرشو نمیکردم به
-                                                    عنوان یه گوشی تقریبا میان رده راضیم کنه و تصورم یه گوشیه
-                                                    ضعیف بود.به عنوان کسی که زیاد با کامپیوتر و گوشی سر و کار
-                                                    داره و سرعت و امکانات براش مهمه کاملا توقعاتمو برآروده
-                                                    کرد.طراحی به روز و جذابی هم داره.رنگ مشکی 128 گیگ با رام 4
-                                                    رو گرفتم که زیبایی خاصی داره.از دیجیکالا هم تشکر میکنم که
-                                                    محصولو به موقع در تعطیلات به دستم رسوند و گارانتی و برگه
-                                                    نحوه رجستر کردن گوشی همراهش بود و بسته بندی خوبی
-                                                    طولانی مدت ندارند.</p>
-                                                <div class="comments-evaluation">
-                                                    <div class="comments-evaluation-positive">
-                                                        <span>نقاط قوت</span>
-                                                        <ul>
-                                                            <li>فینگر تاچ عالی نیست ولی رضایت بخشه.تاچ قوی داره
-                                                            </li>
-                                                            <li>نور صفحه نمایش زیاد و کیفت صفحه نمایش قابل قبوله
-                                                            </li>
-                                                            <li>سخت افزار مناسب و سرعت خوب
-                                                            </li>
-                                                            <li>داشتن کاور ژله ای شفاف همراه گوشی و صدای واضح و
-                                                                بلند
-                                                            </li>
-                                                            <li>میزان شارژ دهی مناسب و دوربین سلفی خوب</li>
-                                                        </ul>
-                                                    </div>
-
-                                                    <div class="comments-evaluation-negative">
-                                                        <span>نقاط ضعف</span>
-                                                        <ul>
-                                                            <li>نداشتن گلاس صفحه
-                                                            </li>
-                                                            <li>سیم شارژر خیلی کوتاهه</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="footer">
-                                                    <div class="comments-likes">
-                                                        آیا این نظر برایتان مفید بود؟
-                                                        <button class="btn-like" data-counter="۰">بله</button>
-                                                        <button class="btn-like" data-counter="۰">خیر</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-3 aside">
-                                                <ul class="comments-user-shopping">
-                                                    <li>
-                                                        <div class="cell cell-name">
-                                                            کاربر اینجانب
-                                                        </div>
-                                                        <div class="comments-buyer-badge">خریدار</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cell">
-                                                            در تاریخ ۷ فروردین ۱۳۹۹
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <div class="alert alert-info">
-                                                    <i class="fas fa-thumbs-up"></i> خرید این محصول را توصیه می‌کنم
-                                                </div>
-                                                <ul class="comments-user-shopping">
-                                                    <li>
-                                                        <div class="cell cell-title">رنگ:</div>
-                                                        <div class="cell color-cell">
-                                                            <span class="shopping-color-value"
-                                                                  style="background-color: #FFFFFF;"></span>سفید
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cell cell-title">فروشنده:</div>
-                                                        <div class="cell seller-cell">
-                                                            <a href="#" class="border-bottom-dt">زندگیِ مدرن</a>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-9 article">
-                                                <div class="header">
-                                                    <div>راضیم</div>
-                                                </div>
-                                                <p>من ۳روز که خریدم و راضی هستم دوربینش خوبه فقط به نظرم باتری
-                                                    زود تموم میشه البته دائما هم باهاش کار میکنم ولی هر روز
-                                                    شارژش می‌کنم گوشیه خوش دستیه</p>
-                                                <div class="footer">
-                                                    <div class="comments-likes">
-                                                        آیا این نظر برایتان مفید بود؟
-                                                        <button class="btn-like" data-counter="۰">بله</button>
-                                                        <button class="btn-like" data-counter="۰">خیر</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-3 aside">
-                                                <ul class="comments-user-shopping">
-                                                    <li>
-                                                        <div class="cell cell-name">
-                                                            کاربر اینجانب
-                                                        </div>
-                                                        <div class="comments-buyer-badge">خریدار</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cell">
-                                                            در تاریخ ۷ فروردین ۱۳۹۹
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <div class="alert alert-info">
-                                                    <i class="fas fa-thumbs-up"></i> خرید این محصول را توصیه می‌کنم
-                                                </div>
-                                                <ul class="comments-user-shopping">
-                                                    <li>
-                                                        <div class="cell cell-title">رنگ:</div>
-                                                        <div class="cell color-cell">
-                                                            <span class="shopping-color-value"
-                                                                  style="background-color: #FFFFFF;"></span>سفید
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cell cell-title">فروشنده:</div>
-                                                        <div class="cell seller-cell">
-                                                            <a href="#" class="border-bottom-dt">زندگیِ مدرن</a>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-9 article">
-                                                <div class="header">
-                                                    <div>راضیم</div>
-                                                </div>
-                                                <p>من ۳روز که خریدم و راضی هستم دوربینش خوبه فقط به نظرم باتری
-                                                    زود تموم میشه البته دائما هم باهاش کار میکنم ولی هر روز
-                                                    شارژش می‌کنم گوشیه خوش دستیه</p>
-                                                <div class="footer">
-                                                    <div class="comments-likes">
-                                                        آیا این نظر برایتان مفید بود؟
-                                                        <button class="btn-like" data-counter="۰">بله</button>
-                                                        <button class="btn-like" data-counter="۰">خیر</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-3 aside">
-                                                <ul class="comments-user-shopping">
-                                                    <li>
-                                                        <div class="cell cell-name">
-                                                            کاربر اینجانب
-                                                        </div>
-                                                        <div class="comments-buyer-badge">خریدار</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cell">
-                                                            در تاریخ ۷ فروردین ۱۳۹۹
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <div class="alert alert-info">
-                                                    <i class="fas fa-thumbs-up"></i> خرید این محصول را توصیه می‌کنم
-                                                </div>
-                                                <ul class="comments-user-shopping">
-                                                    <li>
-                                                        <div class="cell cell-title">رنگ:</div>
-                                                        <div class="cell color-cell">
-                                                            <span class="shopping-color-value"
-                                                                  style="background-color: #FFFFFF;"></span>سفید
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cell cell-title">فروشنده:</div>
-                                                        <div class="cell seller-cell">
-                                                            <a href="#" class="border-bottom-dt">زندگیِ مدرن</a>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-9 article">
-                                                <div class="header">
-                                                    <div>راضیم</div>
-                                                </div>
-                                                <p>من ۳روز که خریدم و راضی هستم دوربینش خوبه فقط به نظرم باتری
-                                                    زود تموم میشه البته دائما هم باهاش کار میکنم ولی هر روز
-                                                    شارژش می‌کنم گوشیه خوش دستیه</p>
-                                                <div class="footer">
-                                                    <div class="comments-likes">
-                                                        آیا این نظر برایتان مفید بود؟
-                                                        <button class="btn-like" data-counter="۰">بله</button>
-                                                        <button class="btn-like" data-counter="۰">خیر</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-3 aside">
-                                                <ul class="comments-user-shopping">
-                                                    <li>
-                                                        <div class="cell cell-name">
-                                                            کاربر اینجانب
-                                                        </div>
-                                                        <div class="comments-buyer-badge">خریدار</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cell">
-                                                            در تاریخ ۷ فروردین ۱۳۹۹
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <div class="alert alert-danger">
-                                                    <i class="fas fa-thumbs-down"></i> خرید این محصول را توصیه نمی‌کنم
-                                                </div>
-                                                <ul class="comments-user-shopping">
-                                                    <li>
-                                                        <div class="cell cell-title">رنگ:</div>
-                                                        <div class="cell color-cell">
-                                                            <span class="shopping-color-value"
-                                                                  style="background-color: #FFFFFF;"></span>سفید
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cell cell-title">فروشنده:</div>
-                                                        <div class="cell seller-cell">
-                                                            <a href="#" class="border-bottom-dt">زندگیِ مدرن</a>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-9 article">
-                                                <div class="header">
-                                                    <div>راضیم</div>
-                                                </div>
-                                                <p>من ۳روز که خریدم و راضی هستم دوربینش خوبه فقط به نظرم باتری
-                                                    زود تموم میشه البته دائما هم باهاش کار میکنم ولی هر روز
-                                                    شارژش می‌کنم گوشیه خوش دستیه</p>
-                                                <div class="footer">
-                                                    <div class="comments-likes">
-                                                        آیا این نظر برایتان مفید بود؟
-                                                        <button class="btn-like" data-counter="۰">بله</button>
-                                                        <button class="btn-like" data-counter="۰">خیر</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-3 aside">
-                                                <ul class="comments-user-shopping">
-                                                    <li>
-                                                        <div class="cell cell-name">
-                                                            کاربر اینجانب
-                                                        </div>
-                                                        <div class="comments-buyer-badge">خریدار</div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cell">
-                                                            در تاریخ ۷ فروردین ۱۳۹۹
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <div class="alert alert-info">
-                                                    <i class="fas fa-thumbs-up"></i> خرید این محصول را توصیه می‌کنم
-                                                </div>
-                                                <ul class="comments-user-shopping">
-                                                    <li>
-                                                        <div class="cell cell-title">رنگ:</div>
-                                                        <div class="cell color-cell">
-                                                            <span class="shopping-color-value"
-                                                                  style="background-color: #FFFFFF;"></span>سفید
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cell cell-title">فروشنده:</div>
-                                                        <div class="cell seller-cell">
-                                                            <a href="#" class="border-bottom-dt">زندگیِ مدرن</a>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-9 article">
-                                                <div class="header">
-                                                    <div>راضیم</div>
-                                                </div>
-                                                <p>من ۳روز که خریدم و راضی هستم دوربینش خوبه فقط به نظرم باتری
-                                                    زود تموم میشه البته دائما هم باهاش کار میکنم ولی هر روز
-                                                    شارژش می‌کنم گوشیه خوش دستیه</p>
-                                                <div class="footer">
-                                                    <div class="comments-likes">
-                                                        آیا این نظر برایتان مفید بود؟
-                                                        <button class="btn-like" data-counter="۰">بله</button>
-                                                        <button class="btn-like" data-counter="۰">خیر</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                     <!-- end product-review -->
                                 </div>

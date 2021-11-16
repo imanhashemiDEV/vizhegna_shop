@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 // Front Routes
 Route::get('/',[\App\Http\Controllers\Front\HomeController::class,'index'])->name('home');
 Route::get('/product_detail/{id}',[\App\Http\Controllers\Front\FrontProductController::class,'productDetail'])->name('product.detail');
-
+Route::post('/store_user_comment',[\App\Http\Controllers\Admin\CommentController::class,'storeComment'])->name('store.user.comment');
 
 
 
