@@ -167,7 +167,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <a href="#" class="add-to-cart">
+                                    <a href="#" onclick="addToCart({{$product->id}})" class="add-to-cart">
                                         افزودن به سبد خرید
                                     </a>
                                 </div>

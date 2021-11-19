@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[\App\Http\Controllers\Front\HomeController::class,'index'])->name('home');
 Route::get('/product_detail/{id}',[\App\Http\Controllers\Front\FrontProductController::class,'productDetail'])->name('product.detail');
 Route::post('/store_user_comment',[\App\Http\Controllers\Admin\CommentController::class,'storeComment'])->name('store.user.comment');
-
+Route::post('/store/card/{id}',[\App\Http\Controllers\Front\CartController::class,'storeToCart']);
 
 
 
@@ -32,6 +32,8 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(
     Route::get('/create_role_permissions/{id}',[\App\Http\Controllers\Admin\RoleController::class,'createRolePermission'])->name('create.role.permission');
     Route::post('/store_role_permissions/{id}',[\App\Http\Controllers\Admin\RoleController::class,'storeRolePermission'])->name('store.role.permission');
     Route::resource('/permissions',\App\Http\Controllers\Admin\PermissionController::class);
+    Route::get('/user_comments', [\App\Http\Controllers\Admin\CommentController::class, 'listComment'])->name('list.comment');
+    Route::post('/submit_user_commnet/{id}',[\App\Http\Controllers\Admin\CommentController::class,'submitComment'])->name('submit.comment');
 });
 
 

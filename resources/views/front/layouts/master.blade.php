@@ -60,6 +60,38 @@
         });
     });
 </script>
+<script>
+    function addToCart(id) {
+
+        var quantity=1;
+
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax(
+            {
+                url: url + "/store/card/"+id,
+                type: 'post',
+                dataType: "JSON",
+                data: {
+                    _token:"{{csrf_token()}}",
+                    "id": id,
+                    "qty":quantity,
+                },
+                success: function (response)
+                {
+
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+    }
+</script>
 </body>
 
 </html>

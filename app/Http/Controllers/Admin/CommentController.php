@@ -23,4 +23,25 @@ class CommentController extends Controller
 
         return redirect()->back()->with('message','پیام شما پس از تایید نمایش داده می شود');
     }
+
+
+    public function listComment()
+    {
+       $comments = Comment::query()->paginate(10);
+       return view('admin.commnt.comments',compact('comments'));
+    }
+
+    public function submitComment(Request $request,$id)
+    {
+        $comment = Comment::query()->find($id);
+        if($comment->status==0){
+            $comment->status='1';
+            $comment->save();
+        }else{
+            $comment->status='0';
+            $comment->save();
+        }
+
+        return redirect()->back();
+    }
 }

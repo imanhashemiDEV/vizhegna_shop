@@ -135,7 +135,7 @@
                                                     <div class="product-price">
                                                         {{$product->price}} تومان
                                                     </div>
-                                                    <a href="#" class="btn-add-to-cart">
+                                                    <a href="#" onclick="addToCart({{$product->id}})" class="btn-add-to-cart">
                                                         <i class="fad fa-cart-plus"></i>
                                                         افزودن به سبد خرید
                                                     </a>
