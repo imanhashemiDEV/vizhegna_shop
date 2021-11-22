@@ -38,4 +38,17 @@ class Cart
 
     }
 
+    public function removeFromCart($item,$id)
+    {
+        $this->totalQty --;
+        $this->totalPrice -=  $item['price'] * $this->items[$id]['qty'];
+
+        if($this->items){
+            if(array_key_exists($id,$this->items)){
+               unset($this->items[$id]);
+            }
+        }
+
+    }
+
 }

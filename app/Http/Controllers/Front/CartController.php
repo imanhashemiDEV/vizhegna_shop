@@ -24,4 +24,16 @@ class CartController extends Controller
         ]);
 
     }
+
+    public function removeFromCart(Request $request , $id)
+    {
+        $product = Product::query()->find($id);
+        $oldCart = Session::has('cart') ? Session::get('cart'):null;
+        $cart = new Cart($oldCart);
+        $cart->removeFromCart($product,$id);
+        session()->put('cart',$cart);
+        return response([
+            'cart'=>$cart
+        ]);
+    }
 }

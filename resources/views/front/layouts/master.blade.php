@@ -65,6 +65,10 @@
 
         var quantity=1;
 
+        if($('#input_quantity').length){
+            quantity=$('#input_quantity').val();
+        }
+
 
         $.ajaxSetup({
             headers: {
@@ -81,6 +85,34 @@
                     _token:"{{csrf_token()}}",
                     "id": id,
                     "qty":quantity,
+                },
+                success: function (response)
+                {
+
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+    }
+
+    function removeFromCart(id) {
+
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax(
+            {
+                url: url + "/remove/card/"+id,
+                type: 'post',
+                dataType: "JSON",
+                data: {
+                    _token:"{{csrf_token()}}",
+                    "id": id,
                 },
                 success: function (response)
                 {

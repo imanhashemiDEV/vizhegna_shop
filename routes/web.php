@@ -7,6 +7,7 @@ Route::get('/',[\App\Http\Controllers\Front\HomeController::class,'index'])->nam
 Route::get('/product_detail/{id}',[\App\Http\Controllers\Front\FrontProductController::class,'productDetail'])->name('product.detail');
 Route::post('/store_user_comment',[\App\Http\Controllers\Admin\CommentController::class,'storeComment'])->name('store.user.comment');
 Route::post('/store/card/{id}',[\App\Http\Controllers\Front\CartController::class,'storeToCart']);
+Route::post('/remove/card/{id}',[\App\Http\Controllers\Front\CartController::class,'removeFromCart']);
 
 
 

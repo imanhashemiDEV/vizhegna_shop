@@ -22,15 +22,16 @@
                         <span class="bag-items-number">3</span>
                     </a>
                 </div>
+                @if(Session::has('cart'))
                 <div class="user-item cart-list">
                     <a href="#">
                         <i class="fal fa-shopping-basket"></i>
-                        <span class="bag-items-number">2</span>
+                        <span class="bag-items-number">{{count(\Illuminate\Support\Facades\Session::get('cart')->items)}}</span>
                     </a>
                     <ul>
                         <li class="cart-items">
                             <ul class="do-nice-scroll">
-                                @if(Session::has('cart'))
+
                                     @foreach(\Illuminate\Support\Facades\Session::get('cart')->items as $object)
                                     <li class="cart-item">
                                             <span class="d-flex align-items-center mb-2">
@@ -47,12 +48,12 @@
                                             </span>
                                         <span class="price">{{$object['qty']}}  عدد</span>
                                         <span class="price">{{$object['item']->price}}  تومان</span>
-                                        <button class="remove-item">
+                                        <button class="remove-item" onclick="removeFromCart({{$object['item']->id}})">
                                             <i class="far fa-trash-alt"></i>
                                         </button>
                                     </li>
                                     @endforeach
-                                @endif
+
                             </ul>
                         </li>
                         <li class="cart-footer d-flex align-items-center justify-content-between">
@@ -68,6 +69,7 @@
                         </li>
                     </ul>
                 </div>
+                @endif
                 <div class="user-item account">
                     <!-- <a href="#" class="btn-auth">
                 <i class="fal fa-user-circle"></i>

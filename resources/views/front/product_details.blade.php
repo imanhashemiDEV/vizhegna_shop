@@ -145,7 +145,7 @@
                                     <div class="num-block">
                                         <div class="num-in">
                                             <span class="plus"></span>
-                                            <input type="text" class="in-num" value="1" readonly="">
+                                            <input type="text" id="input_quantity" class="in-num" value="1" readonly="">
                                             <span class="minus dis"></span>
                                         </div>
                                     </div>
@@ -167,7 +167,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <a href="#" onclick="addToCart({{$product->id}})" class="add-to-cart">
+                                    <a href="" onclick="addToCart({{$product->id}})" class="add-to-cart">
                                         افزودن به سبد خرید
                                     </a>
                                 </div>
