@@ -126,14 +126,20 @@
                 cancelButtonText: 'خیر'
             }).then((result) => {
                 if (result.isConfirmed) {
+
+                    //code
+
+
                     Swal.fire({
                         title: 'حذف شد!',
                         confirmButtonText: 'باشه',
                         icon: 'success'
                     })
+
                 }
             })
         });
+
         $('.product-card .product-card-bottom .btn-add-to-cart').on('click', function (event) {
             event.preventDefault();
             const Toast = Swal.mixin({
@@ -662,7 +668,7 @@
                 $('.zoom-image').imagezoomsl({
                     zoomrange: [3, 3],
                 });
-            } 
+            }
             // else {
             //     $('.zoom-image').imagezoomsl({
             //         zoomrange: [1, 12],

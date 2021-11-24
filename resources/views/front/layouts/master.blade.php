@@ -88,7 +88,7 @@
                 },
                 success: function (response)
                 {
-
+                     location.reload();
                 },
                 error: function(xhr) {
                     console.log(xhr.responseText);
@@ -116,7 +116,7 @@
                 },
                 success: function (response)
                 {
-
+                    location.reload();
                 },
                 error: function(xhr) {
                     console.log(xhr.responseText);

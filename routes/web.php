@@ -8,7 +8,7 @@ Route::get('/product_detail/{id}',[\App\Http\Controllers\Front\FrontProductContr
 Route::post('/store_user_comment',[\App\Http\Controllers\Admin\CommentController::class,'storeComment'])->name('store.user.comment');
 Route::post('/store/card/{id}',[\App\Http\Controllers\Front\CartController::class,'storeToCart']);
 Route::post('/remove/card/{id}',[\App\Http\Controllers\Front\CartController::class,'removeFromCart']);
-
+Route::get('/shipping_payment',[\App\Http\Controllers\Admin\PaymentController::class,'showPayment'])->name('show.payment');
 
 
 // Admin Routes

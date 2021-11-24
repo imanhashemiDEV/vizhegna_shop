@@ -22,7 +22,7 @@
                         <span class="bag-items-number">3</span>
                     </a>
                 </div>
-                @if(Session::has('cart'))
+                @if(Session::has('cart') && count(\Illuminate\Support\Facades\Session::get('cart')->items)>0)
                 <div class="user-item cart-list">
                     <a href="#">
                         <i class="fal fa-shopping-basket"></i>
@@ -48,7 +48,7 @@
                                             </span>
                                         <span class="price">{{$object['qty']}}  عدد</span>
                                         <span class="price">{{$object['item']->price}}  تومان</span>
-                                        <button class="remove-item" onclick="removeFromCart({{$object['item']->id}})">
+                                        <button class="remove-myitem" onclick="removeFromCart({{$object['item']->id}})">
                                             <i class="far fa-trash-alt"></i>
                                         </button>
                                     </li>
@@ -62,7 +62,7 @@
                                         <span class="total"> {{\Illuminate\Support\Facades\Session::get('cart')->totalPrice}} تومان</span>
                                     </span>
                             <span class="d-block text-center px-2">
-                                        <a href="#" class="btn-cart">
+                                        <a href="{{route('show.payment')}}" class="btn-cart">
                                             ثبت سفارش
                                         </a>
                                     </span>
