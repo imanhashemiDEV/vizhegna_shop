@@ -9,7 +9,9 @@ Route::post('/store_user_comment',[\App\Http\Controllers\Admin\CommentController
 Route::post('/store/card/{id}',[\App\Http\Controllers\Front\CartController::class,'storeToCart']);
 Route::post('/remove/card/{id}',[\App\Http\Controllers\Front\CartController::class,'removeFromCart']);
 Route::get('/shipping_payment',[\App\Http\Controllers\Admin\PaymentController::class,'showPayment'])->name('show.payment');
-
+Route::post('/store/payment',[\App\Http\Controllers\Admin\PaymentController::class,'savePayment'])->name('save.payment');
+Route::get('/payment/callback',[\App\Http\Controllers\Admin\PaymentController::class,'callback']);
+Route::post('/add_user_address',[\App\Http\Controllers\Front\AddressController::class,'addUserAddress'])->name('add.user.address');
 
 // Admin Routes
 Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(function (){
