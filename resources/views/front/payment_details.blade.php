@@ -7,8 +7,7 @@
             <div class="container">
                 <div class="row mb-4">
                     <div class="col-12 mb-md-0 mb-3">
-                        <form action="{{route('save.payment')}}" method="post">
-                            @csrf
+
                         <div class="checkout-section shadow-around">
                             <div class="checkout-step">
                                 <ul>
@@ -30,10 +29,10 @@
                                         @foreach(auth()->user()->addresses as $address)
                                             <div class="col-xl-3 col-lg-4 col-sm-6 mb-3">
                                                 <div class="custom-control custom-radio">
-                                                    <input type="radio" id="address_id" name="address_id" value="{{$address->id}}"
+                                                    <input type="radio" id="{{$address->id}}" value="{{$address->id}}" name="address_id"
                                                            class="custom-control-input">
                                                     <label class="custom-control-label address-select"
-                                                           for="address_id">
+                                                           for="{{$address->id}}">
                                                         <span class="head-address-select">به این آدرس ارسال شود</span>
                                                         <span>{{$address->address}}</span>
                                                         <span>
@@ -62,6 +61,8 @@
 
                             </div>
                         </div>
+                        <form action="{{route('save.payment')}}" method="post">
+                            @csrf
                         <div class="shadow-around pt-3">
                             <div class="container">
 
@@ -93,8 +94,8 @@
                                 </div>
 
                             </div>
-
                             <hr>
+                            <input type="hidden" id="address" name="address_id">
                             <div class="d-flex justify-content-between px-3 py-2">
                                 <span class="font-weight-bold">جمع</span>
                                 <span class="font-weight-bold">
@@ -241,4 +242,14 @@
         <!-- end Page Content -->
         @include('front.partials.footer')
     </div>
+@endsection
+@section('scripts')
+    <script>
+        $(document).ready(function () {
+          $('.custom-radio > .custom-control-input').on('click',function () {
+                var address_id = $('input[name=address_id]:checked').val();
+                $('#address').val(address_id);
+          })
+        });
+    </script>
 @endsection

@@ -38,18 +38,27 @@ class PaymentController extends Controller
 
 
         $invoice = (new Invoice)->amount(Session::get('cart')->totalPrice);
-        Payment::purchase($invoice,function($driver, $transactionId) use($order) {
+        Session::forget('cart');
+       return Payment::purchase($invoice,function($driver, $transactionId) use($order) {
             $order->update([
                 'transaction_id'=>$transactionId
             ]);
         })->pay()->render();
 
-       // Session::forget('cart');
+
 
     }
 
     public function callback(Request $request)
     {
-        dd($request->all());
+        $order = Order::query()->where('transaction_id',$request->get('Authority'))->first();
+
+        if($request->get('Status')=="OK"){
+            $order->update([
+                'status'=>1,
+            ]);
+        }
+
+        return redirect()->route('home');
     }
 }
