@@ -37,6 +37,7 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(
     Route::resource('/permissions',\App\Http\Controllers\Admin\PermissionController::class);
     Route::get('/user_comments', [\App\Http\Controllers\Admin\CommentController::class, 'listComment'])->name('list.comment');
     Route::post('/submit_user_commnet/{id}',[\App\Http\Controllers\Admin\CommentController::class,'submitComment'])->name('submit.comment');
+    Route::resource('/articles',\App\Http\Controllers\Admin\ArticleController::class);
 });
 
 

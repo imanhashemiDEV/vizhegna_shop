@@ -41,4 +41,9 @@ class Category extends Model
     {
         return $this->hasMany(PropertyGroup::class);
     }
+
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
 }
