@@ -12,6 +12,8 @@ Route::get('/shipping_payment',[\App\Http\Controllers\Admin\PaymentController::c
 Route::post('/store/payment',[\App\Http\Controllers\Admin\PaymentController::class,'savePayment'])->name('save.payment');
 Route::get('/payment/callback',[\App\Http\Controllers\Admin\PaymentController::class,'callback']);
 Route::post('/add_user_address',[\App\Http\Controllers\Front\AddressController::class,'addUserAddress'])->name('add.user.address');
+Route::get('/blog',[\App\Http\Controllers\Front\BlogController::class,'index'])->name('blog.list');
+Route::get('/blog_details/{id}',[\App\Http\Controllers\Front\BlogController::class,'article'])->name('blog.article.details');
 
 // Admin Routes
 Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(function (){

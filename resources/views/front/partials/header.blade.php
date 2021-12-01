@@ -147,19 +147,8 @@
                     </li>
                 @endforeach
                 <li>
-                    <a href="#"><i class="fal fa-badge-percent text-danger"></i>تخفیف ها و پیشنهادها</a>
-
+                    <a href="{{route('blog.list')}}"><i class="fal fa-plus-square text-primary"></i>وبلاگ</a>
                 </li>
-                <li>
-                    <a href="#"><i class="fal fa-shield-check text-success"></i>همتای من</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fal fa-plus-square text-primary"></i>همتا پلاس</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fal fa-coin text-secondary"></i>همتا کلاب</a>
-                </li>
-
             </ul>
         </nav>
     </div>
