@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Exports\BrandExport;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BrandRequest;
+use App\Imports\BrandImport;
 use App\Models\Brand;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class BrandController extends Controller
 {
@@ -78,5 +81,22 @@ class BrandController extends Controller
         $path = public_path()."/images/brands/".$brand->image;
         unlink($path);
         $brand->delete();
+    }
+
+    public function exportExcel()
+    {
+        $brands = Brand::query()->get();
+        return Excel::download(new BrandExport($brands),'brand-excel.xlsx');
+    }
+
+    public function importExcell()
+    {
+        return view('admin.brand.excel_brand');
+    }
+
+    public function insertExcel(Request $request)
+    {
+        Excel::import(new BrandImport(), $request->file('file')->store('temp'));
+        return back();
     }
 }

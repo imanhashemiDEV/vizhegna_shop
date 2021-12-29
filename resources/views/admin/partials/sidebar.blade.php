@@ -128,6 +128,18 @@
                                     <p>لیست برند ها</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{route('export.excel')}}" class="nav-link">
+                                    <i class="fa fa-list nav-icon"></i>
+                                    <p>خروجی اکسل</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('import.excel')}}" class="nav-link">
+                                    <i class="fa fa-list nav-icon"></i>
+                                    <p>ورودی اکسل</p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item has-treeview">

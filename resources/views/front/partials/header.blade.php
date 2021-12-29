@@ -9,9 +9,9 @@
                     </a>
                 </div>
                 <div class="search-box">
-                    <form action="#">
-                        <input type="text" placeholder="نام محصول یا برند را جستجو کنید...">
-                        <i class="far fa-search"></i>
+                    <form action="{{route('search.product')}}" method="get">
+                        <input type="text" placeholder="نام محصول یا برند را جستجو کنید..." name="search">
+                        <button type="submit"> <i class="far fa-search"></i> </button>
                     </form>
                 </div>
             </div>

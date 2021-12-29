@@ -14,7 +14,7 @@ Route::get('/payment/callback',[\App\Http\Controllers\Admin\PaymentController::c
 Route::post('/add_user_address',[\App\Http\Controllers\Front\AddressController::class,'addUserAddress'])->name('add.user.address');
 Route::get('/blog',[\App\Http\Controllers\Front\BlogController::class,'index'])->name('blog.list');
 Route::get('/blog_details/{id}',[\App\Http\Controllers\Front\BlogController::class,'article'])->name('blog.article.details');
-
+Route::get('/serach_product',[\App\Http\Controllers\Admin\ProductController::class,'searchProduct'])->name('search.product');
 // Admin Routes
 Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(function (){
 
@@ -40,6 +40,9 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(
     Route::get('/user_comments', [\App\Http\Controllers\Admin\CommentController::class, 'listComment'])->name('list.comment');
     Route::post('/submit_user_commnet/{id}',[\App\Http\Controllers\Admin\CommentController::class,'submitComment'])->name('submit.comment');
     Route::resource('/articles',\App\Http\Controllers\Admin\ArticleController::class);
+    Route::get('/export_excel',[\App\Http\Controllers\Admin\BrandController::class,'exportExcel'])->name('export.excel');
+    Route::get('/import_excel',[\App\Http\Controllers\Admin\BrandController::class,'importExcell'])->name('import.excel');
+    Route::post('/insert_excel',[\App\Http\Controllers\Admin\BrandController::class,'insertExcel'])->name('insert.excel');
 });
 
 
