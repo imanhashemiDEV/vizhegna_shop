@@ -136,12 +136,9 @@ class ProductController extends Controller
     public function searchProduct(Request $request)
     {
       $search = $request->search;
-      $products = Product::query()->with(['comments'=>function($q) use($search){
-          $q->orWhere('body','like','%'.$search.'%');
-      }])->
-      orWhere('title','like','%'.$search.'%')
+      $products = Product::query()->where('title','like','%'.$search.'%')
       ->orWhere('slug','like','%'.$search.'%')
-          ->get();
+          ->latest();
 
       dd($products);
     }
