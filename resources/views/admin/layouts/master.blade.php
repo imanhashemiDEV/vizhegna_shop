@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{url('panel/dist/css/custom-style.css')}}">
     <link rel="stylesheet" href="{{url('panel/plugins/dropzone/css/dropzone.css')}}">
     <link rel="stylesheet" href="{{url('panel/plugins/colorpicker/css/bootstrap-colorpicker.min.css')}}">
-    <link rel="stylesheet" href="{{url('panel/plugins/tinymce/contrnt.min.css')}}">
+    <link rel="stylesheet" href="{{url('panel/plugins/tinymce/content.min.css')}}">
     <link rel="stylesheet" href="{{url('panel/plugins/tinymce/skin.min.css')}}">
     <link rel="stylesheet" href="{{url('css/custom.css')}}">
 </head>

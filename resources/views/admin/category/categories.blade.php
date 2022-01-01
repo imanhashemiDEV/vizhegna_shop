@@ -100,18 +100,28 @@
                                 },
                                 success: function (response)
                                 {
-                                    Swal.fire(
-                                        'دسته حذف شد',
-                                        'دسته مورد نظر با موفقیت حذف شد',
-                                        'باشه'
-                                    );
+                                    if(response===false){
+                                        Swal.fire(
+                                            'دسته حذف نشد',
+                                            'دسته مورد نظر مورد استفاده می باشد',
+                                            'باشه'
+                                        );
+                                    }else{
+                                        Swal.fire(
+                                            'دسته حذف شد',
+                                            'دسته مورد نظر با موفقیت حذف شد',
+                                            'باشه'
+                                        );
+                                    }
+
                                 },
                                 error: function(xhr) {
-                                    console.log(xhr.responseText);
+                                   // console.log(xhr.responseText);
+                                    console.log('ok not');
                                 }
                             });
 
-                        location.reload();
+                        // location.reload();
                     }
                 });
             }

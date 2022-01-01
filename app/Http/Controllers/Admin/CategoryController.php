@@ -74,11 +74,18 @@ class CategoryController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function destroy($id)
     {
-        Category::destroy($id);
+        $category = Category::query()->find($id);
+        if(count($category->products) > 0){
+            return Response()->json(false);
+        }else{
+           // Category::destroy($id);
+            return  Response()->json(true);
+        }
+
     }
 
 }

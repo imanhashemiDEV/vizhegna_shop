@@ -138,6 +138,9 @@ class ProductController extends Controller
       $search = $request->search;
       $products = Product::query()->where('title','like','%'.$search.'%')
       ->orWhere('slug','like','%'.$search.'%')
+          ->orWhereHas('comments', function ($q) use($search){
+              $q->where('body','like','%'.$search.'%');
+          })->with('comments')
           ->latest();
 
       dd($products);
