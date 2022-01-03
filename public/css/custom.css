@@ -10,3 +10,95 @@
 .select2-container .select2-selection--single {
     height: 38px;
 }
+
+
+/* breadcrump*/
+
+
+ul.breadcrumbs {
+    margin: 25px 0px 0px;
+    padding: 0px;
+    font-size: 0px;
+    line-height: 0px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: top;
+    height: 40px;
+}
+ul.breadcrumbs li {
+    position: relative;
+    margin: 0px 0px;
+    padding: 0px;
+    list-style: none;
+    list-style-image: none;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: top;
+    border-left: 1px solid #ccc;
+    transition: 0.3s ease;
+}
+ul.breadcrumbs li:hover:before {
+    border-right: 10px solid #96be11;
+}
+ul.breadcrumbs li:hover a {
+    color: #000;
+    background: #96be11;
+}
+ul.breadcrumbs li:before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: -1px;
+    z-index: 20;
+    border-right: 10px solid #fff;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+    transition: 0.3s ease;
+}
+ul.breadcrumbs li:after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: -1px;
+    z-index: 10;
+    border-right: 10px solid #ccc;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+}
+ul.breadcrumbs li.active a {
+    color: #000;
+    background: #96be11;
+}
+ul.breadcrumbs li.first {
+    border-right: none;
+}
+ul.breadcrumbs li.first a {
+    font-size: 18px;
+    padding-right: 20px;
+    border-radius: 5px 0px 0px 5px;
+}
+ul.breadcrumbs li.last:before {
+    display: none;
+}
+ul.breadcrumbs li.last:after {
+    display: none;
+}
+ul.breadcrumbs li.last a {
+    padding-left: 20px;
+    border-radius: 40px 0px 0px 40px;
+}
+ul.breadcrumbs li a {
+    display: block;
+    font-size: 12px;
+    line-height: 40px;
+    color: #757575;
+    padding: 0px 15px 0px 25px;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
