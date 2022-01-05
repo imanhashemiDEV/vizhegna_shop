@@ -16,12 +16,12 @@ class UserController extends Controller
 
     public function index()
     {
-        $user = User::query()->find(1);
-        Mail::send(new ConfirmMail($user));
-        dd('mail is send');
+//        $user = User::query()->find(1);
+//        Mail::send(new ConfirmMail($user));
+//        dd('mail is send');
 
-//        $users = User::query()->paginate(10);
-//        return view('admin.users.users',compact('users'));
+        $users = User::query()->paginate(10);
+        return view('admin.users.users',compact('users'));
     }
 
 
