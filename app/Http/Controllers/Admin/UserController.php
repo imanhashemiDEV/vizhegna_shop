@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ConfirmMail;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
@@ -14,8 +16,12 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::query()->paginate(10);
-        return view('admin.users.users',compact('users'));
+        $user = User::query()->find(1);
+        Mail::send(new ConfirmMail($user));
+        dd('mail is send');
+
+//        $users = User::query()->paginate(10);
+//        return view('admin.users.users',compact('users'));
     }
 
 
