@@ -43,6 +43,7 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(
     Route::get('/export_excel',[\App\Http\Controllers\Admin\BrandController::class,'exportExcel'])->name('export.excel');
     Route::get('/import_excel',[\App\Http\Controllers\Admin\BrandController::class,'importExcell'])->name('import.excel');
     Route::post('/insert_excel',[\App\Http\Controllers\Admin\BrandController::class,'insertExcel'])->name('insert.excel');
+    Route::get('/logs', [\App\Http\Controllers\Admin\LogViewerController::class,'index'])->name('logs.index');
 });
 
 

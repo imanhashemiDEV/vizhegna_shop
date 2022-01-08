@@ -274,6 +274,23 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link active">
+                            <i class="nav-icon fa fa-folder"></i>
+                            <p>
+                                لاگ ها
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{route('logs.index')}}" class="nav-link">
+                                    <i class="fa fa-plus-circle nav-icon"></i>
+                                    <p>لاگ ها</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
