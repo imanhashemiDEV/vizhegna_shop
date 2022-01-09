@@ -135,14 +135,21 @@ class ProductController extends Controller
 
     public function searchProduct(Request $request)
     {
+        $categories = Category::query()->where('parent_id', '!=', 0)->get();
+
       $search = $request->search;
       $products = Product::query()->where('title','like','%'.$search.'%')
       ->orWhere('slug','like','%'.$search.'%')
           ->orWhereHas('comments', function ($q) use($search){
               $q->where('body','like','%'.$search.'%');
           })->with('comments')
-          ->latest();
+          ->get();
 
-      dd($products);
+      return view('front.search', compact('categories','search'));
+    }
+
+    public function getUrl(Request $request)
+    {
+        dd($request->input('search'));
     }
 }

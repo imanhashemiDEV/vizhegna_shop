@@ -15,6 +15,7 @@ Route::post('/add_user_address',[\App\Http\Controllers\Front\AddressController::
 Route::get('/blog',[\App\Http\Controllers\Front\BlogController::class,'index'])->name('blog.list');
 Route::get('/blog_details/{id}',[\App\Http\Controllers\Front\BlogController::class,'article'])->name('blog.article.details');
 Route::get('/serach_product',[\App\Http\Controllers\Admin\ProductController::class,'searchProduct'])->name('search.product');
+Route::get('/get_url',[\App\Http\Controllers\Admin\ProductController::class,'getUrl'])->name('get.url');
 // Admin Routes
 Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(function (){
 
