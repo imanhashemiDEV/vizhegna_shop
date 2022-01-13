@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class ArticleController extends Controller
 {
@@ -26,9 +27,16 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         if($request->hasFile('photo')){
+
             $photo = $request->file('photo');
             $fileName = time().'.'.$photo->extension();
-            $photo->move(public_path('images/articles'), $fileName);
+           // $photo->move(public_path('images/articles'), $fileName);
+            $image = Image::make($photo);
+            $image->resize(400, 400, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save(public_path('images/articles/'.$fileName));
+
+
         }
 
        Article::query()->create([
