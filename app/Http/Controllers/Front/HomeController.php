@@ -11,7 +11,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        Log::info('logging');
+        app()->setLocale('en');
+
         $categories = Category::query()->where('parent_id',0)->get();
         return view('front.index',compact('categories'));
     }

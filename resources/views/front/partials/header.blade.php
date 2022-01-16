@@ -149,6 +149,9 @@
                 <li>
                     <a href="{{route('blog.list')}}"><i class="fal fa-plus-square text-primary"></i>وبلاگ</a>
                 </li>
+                    <li>
+                        <a href="{{route('blog.list')}}"><i class="fal fa-plus-square text-primary"></i>{{__('home.about_us')}}</a>
+                    </li>
             </ul>
         </nav>
     </div>
