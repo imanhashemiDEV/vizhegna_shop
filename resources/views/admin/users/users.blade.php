@@ -22,10 +22,12 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body table-responsive p-0">
+                            <button class="btn btn-success" onclick="doCheck()" >click</button>
                             <table class="table table-hover">
                                 <tbody>
                                 <tr>
                                     <th class="text-primary text-center align-middle">ردیف</th>
+                                    <th class="text-primary text-center align-middle">انتخاب</th>
                                     <th class="text-primary text-center align-middle">نام و نام خانوادگی</th>
                                     <th class="text-primary text-center align-middle">ایمیل</th>
                                     <th class="text-primary text-center align-middle">نقش های کاربر</th>
@@ -35,6 +37,9 @@
                                 @foreach($users as $user)
                                     <tr>
                                         <td class="text-center align-middle">{{$i++}}</td>
+                                        <td class="text-center align-middle">
+                                            <input type="checkbox" name="foos[]" value="{{$user->id}}">
+                                        </td>
                                         <td class="text-center align-middle">{{$user->name}}</td>
                                         <td class="text-center align-middle">{{$user->email}}</td>
                                         <td class="text-center align-middle">
@@ -64,4 +69,39 @@
             <!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
+@endsection
+@section('scripts')
+    <script>
+        function doCheck() {
+
+                var ids = [];
+                $.each($("input:checked"), function() {
+                    ids.push($(this).val());
+                });
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $.ajax(
+                {
+                    url: url + "/admin/get_checked_user/",
+                    type: 'post',
+                    dataType: "JSON",
+                    data: {
+                        "ids": ids
+                    },
+                    success: function (response)
+                    {
+
+
+                    },
+                    error: function(xhr) {
+                         console.log(xhr.responseText);
+                    }
+                });
+        }
+    </script>
 @endsection

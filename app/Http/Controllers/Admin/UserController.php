@@ -85,4 +85,13 @@ class UserController extends Controller
         $user->syncRoles($request->roles);
         return redirect()->back()->with('message','نقش ها با موفقیت به کاربر متصل شدند ');
     }
+
+    public function checkedUser(Request $request)
+    {
+        $ids=$request->ids;
+
+        User::query()->whereIn('id',$ids)->update([
+            'status'=>0
+        ]);
+    }
 }
