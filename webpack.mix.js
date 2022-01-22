@@ -20,3 +20,18 @@ mix.js('resources/js/app.js', 'public/js')
 if (mix.inProduction()) {
     mix.version();
 }
+
+
+// mix.js('resources/js/script.js', 'public/js')
+//     .postCss('resources/css/style.css', 'public/css');
+
+// mix.styles(
+//     [
+//         'resources/css/style1.css',
+//         'resources/css/style2.css',
+//     ], 'public/css')
+//     .scripts([
+//             'resources/js/script1.js',
+//             'resources/js/script2.js',
+//         ], 'public/js'
+//     );

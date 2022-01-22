@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{url('front/css/plugins/sweetalert2.min.css')}}">
     <link rel="stylesheet" href="{{url('front/css/plugins/select2.min.css')}}">
     <link rel="stylesheet" href="{{url('front/css/plugins/swiper.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <!-- CSS Template -->
     <link rel="stylesheet" href="{{url('front/css/theme.css')}}">
     <!-- Here goes your custom.css -->
