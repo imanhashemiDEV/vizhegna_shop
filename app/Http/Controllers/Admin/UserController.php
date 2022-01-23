@@ -90,8 +90,12 @@ class UserController extends Controller
     {
         $ids=$request->ids;
 
-        User::query()->whereIn('id',$ids)->update([
-            'status'=>0
-        ]);
+//       $users =  User::query()->whereIn('id',$ids)->update([
+//            //'status'=>0
+//        ]);
+
+        $users =  User::query()->whereIn('id',$ids)->get();
+
+       dd($users);
     }
 }
