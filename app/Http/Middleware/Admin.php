@@ -17,7 +17,7 @@ class Admin
     public function handle(Request $request, Closure $next)
     {
         $user =auth()->user();
-        if($user->hasRole(['ادمین'])){
+        if( $user->id==1){
             return $next($request);
         }else{
             return  redirect()->route('home');

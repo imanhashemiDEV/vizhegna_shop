@@ -45,11 +45,7 @@
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>
                                         </td>
-                                        <td class="text-center align-middle">
-                                            <a class="btn btn-app" onclick="deleteItem({{$category->id}})">
-                                                <i class="fa fa-trash"></i> حذف
-                                            </a>
-                                        </td>
+                                        <livewire:admin.delete-category :category="$category"/>
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -71,59 +67,30 @@
 @endsection
 @section('scripts')
     <script>
-            function deleteItem(id) {
-                Swal.fire({
-                    title: 'حذف دسته بندی',
-                    text: "آیا از حذف مطمئن هستید؟",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'بله',
-                    cancelButtonText: 'خیر',
-                }).then((result) => {
-                    if (result.isConfirmed) {
 
-                        $.ajaxSetup({
-                            headers: {
-                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                            }
-                        });
+        window.addEventListener('deleteCat', event => {
+            Swal.fire({
+                title: 'حذف دسته بندی',
+                text: "آیا از حذف مطمئن هستید؟",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'بله',
+                cancelButtonText: 'خیر',
+            }).then((result) => {
+                if (result.isConfirmed) {
 
-                        $.ajax(
-                            {
-                                url: url + "/admin/categories/"+id,
-                                type: 'delete',
-                                dataType: "JSON",
-                                data: {
-                                    "id": id
-                                },
-                                success: function (response)
-                                {
-                                    if(response===false){
-                                        Swal.fire(
-                                            'دسته حذف نشد',
-                                            'دسته مورد نظر مورد استفاده می باشد',
-                                            'باشه'
-                                        );
-                                    }else{
-                                        Swal.fire(
-                                            'دسته حذف شد',
-                                            'دسته مورد نظر با موفقیت حذف شد',
-                                            'باشه'
-                                        );
-                                    }
+                  Livewire.emit('destroyCategory',event.detail.id);
 
-                                },
-                                error: function(xhr) {
-                                   // console.log(xhr.responseText);
-                                    console.log('ok not');
-                                }
-                            });
+                     location.reload();
+                }
+            });
+        })
 
-                        // location.reload();
-                    }
-                });
-            }
+
+
+
+
     </script>
 @endsection

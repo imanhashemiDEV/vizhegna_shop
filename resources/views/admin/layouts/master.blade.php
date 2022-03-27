@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{url('panel/plugins/tinymce/content.min.css')}}">
     <link rel="stylesheet" href="{{url('panel/plugins/tinymce/skin.min.css')}}">
     <link rel="stylesheet" href="{{url('css/custom.css')}}">
+    @livewireStyles
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -157,7 +158,9 @@
     }
 
 </script>
+@livewireScripts
 @yield('scripts')
+
 </body>
 
 </html>
