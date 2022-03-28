@@ -9,9 +9,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Shetabit\Multipay\Invoice;
 use Shetabit\Payment\Facade\Payment;
+use App\Repositories\Payment\CheckPayment;
 
 class PaymentController extends Controller
 {
+    public function pay(Request $request)
+    {
+        $type = $request->type;
+         $check_payment = new CheckPayment();
+         $check_payment->checker($type)->pay();
+    }
+
     public function showPayment()
     {
         $categories = Category::query()->where('parent_id', 0)->get();
@@ -61,4 +69,6 @@ class PaymentController extends Controller
 
         return redirect()->route('home');
     }
+
+
 }

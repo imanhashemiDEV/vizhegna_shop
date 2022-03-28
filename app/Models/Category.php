@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Http\Requests\CategoryRequest;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -45,5 +46,14 @@ class Category extends Model
     public function articles()
     {
         return $this->hasMany(Article::class);
+    }
+
+    public static function storeCategory(CategoryRequest $request)
+    {
+        Category::query()->create([
+            'title'=>$request->input('title'),
+            'slug'=>make_slug($request->input('title')),
+            'parent_id'=>$request->input('parent_id')
+        ]);
     }
 }

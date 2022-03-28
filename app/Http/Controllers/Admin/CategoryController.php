@@ -26,13 +26,10 @@ class CategoryController extends Controller
     }
 
 
-    public function store(CategoryRequest $request)
+    public function store(CategoryRequest $request): \Illuminate\Http\RedirectResponse
     {
-        $category = Category::query()->create([
-            'title'=>$request->input('title'),
-            'slug'=>make_slug($request->input('title')),
-            'parent_id'=>$request->input('parent_id')
-        ]);
+
+        Category::storeCategory($request);
 
         return redirect()->back()->with('message','دسته بندی با موفقیت اضافه شد');
     }
