@@ -25,17 +25,8 @@ class HomeController extends Controller
 //        dd($users);
         //app()->setLocale('en');
 
-        $now = Carbon::now();
-        $start = $now->copy()->startOfWeek(Carbon::SATURDAY)->format('Y-m-d');
-        $end = $now->copy()->endOfWeek(Carbon::FRIDAY)->format('Y-m-d');
 
-
-
-       $users =  User::query()->whereDate('created_at','>=',$start)
-                    ->whereDate('created_at','<=',$end)->get();
-
-
-       // $categories = Category::query()->where('parent_id',0)->get();
-       // return view('front.index',compact('categories'));
+        $categories = Category::query()->where('parent_id',0)->get();
+        return view('front.index',compact('categories'));
     }
 }
