@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Helpers\DateShamsi;
 use App\Http\Controllers\Controller;
 use App\Mail\ConfirmMail;
 use App\Models\User;
@@ -38,6 +39,11 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+
+       // dd($request->date);
+       // dd(DateShamsi::shamsi_to_miladi($request->date));
+
+
 
         return redirect()->back()->with('message','کاربر با موفقیت ثبت شد');
     }

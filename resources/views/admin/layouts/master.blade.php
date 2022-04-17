@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{url('panel/plugins/colorpicker/css/bootstrap-colorpicker.min.css')}}">
     <link rel="stylesheet" href="{{url('panel/plugins/tinymce/content.min.css')}}">
     <link rel="stylesheet" href="{{url('panel/plugins/tinymce/skin.min.css')}}">
+    <link rel="stylesheet" href="{{url('css/kamadatepicker.min.css')}}">
     <link rel="stylesheet" href="{{url('css/custom.css')}}">
     @livewireStyles
 </head>
@@ -41,6 +42,8 @@
 <script src="{{url('panel/plugins/dropzone/js/dropzone.js')}}"></script>
 <script src="{{url('panel/plugins/colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
 <script src="{{url('panel/plugins/tinymce/tinymce.min.js')}}"></script>
+<script src="{{url('js/kamadatepicker.holidays.js')}}"></script>
+<script src="{{url('js/kamadatepicker.min.js')}}"></script>
 <script src="{{url('js/custom.js')}}"></script>
 
 <script>
