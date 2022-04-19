@@ -21,8 +21,7 @@ class UserController extends Controller
 //        Mail::send(new ConfirmMail($user));
 //        dd('mail is send');
 
-        $users = User::query()->paginate(10);
-        return view('admin.users.users',compact('users'));
+        return view('admin.users.users');
     }
 
 
