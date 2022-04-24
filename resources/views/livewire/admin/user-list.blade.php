@@ -18,11 +18,15 @@
 
             <input type="text" class="form-control" wire:model='search'>
 
+            <button class="btn btn-info" wire:click="DeleteAll" > Delete All </button>
+
             <table class="table table-hover">
                 <tbody>
                 <tr>
                     <th class="text-primary text-center align-middle">ردیف</th>
-                    <th class="text-primary text-center align-middle">انتخاب</th>
+                    <th class="text-primary text-center align-middle">
+                    <input type="checkbox" wire:click="checkAll">
+                    </th>
                     <th class="text-primary text-center align-middle">نام و نام خانوادگی</th>
                     <th class="text-primary text-center align-middle">ایمیل</th>
                     <th class="text-primary text-center align-middle">نقش های کاربر</th>
@@ -33,7 +37,7 @@
                     <tr>
                         <td class="text-center align-middle">{{$i++}}</td>
                         <td class="text-center align-middle">
-                            <input type="checkbox" name="foos[]" value="{{$user->id}}">
+                            <input type="checkbox"  wire:model="selected_users" value="{{$user->id}}">
                         </td>
                         <td class="text-center align-middle">{{$user->name}}</td>
                         <td class="text-center align-middle">{{$user->email}}</td>
